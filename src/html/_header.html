@@ -1,5 +1,60 @@
 <header class="header">
-    <div class="container">
-
+    <div class="header__top">
+        <div class="container header__top-container">
+            <address class="header-contact header-contact--location">
+                <svg class="header-contact__icon" aria-hidden="true">
+                    <use xlink:href="@img/sprite.svg#icon-location"></use>
+                </svg>
+                Ваша клиника: <a href="#" class="header-contact__link header-contact__link--address">СПб, пр. Ветеранов, д. 130</a>
+            </address>
+            <a href="tel:+78126125610" class="header-contact header-contact--phone">
+                <svg class="header-contact__icon" aria-hidden="true">
+                    <use xlink:href="@img/sprite.svg#icon-phone"></use>
+                </svg>
+                +7 (812) 612-56-10
+            </a>
+            <a href="#" class="button header__button">Запись на прием</a>
+        </div>
+    </div>
+    <div class="header__body">
+        <div class="container header__body-container">
+            <a href="/" class="logo header__logo">
+                <img src="@img/logo.svg" alt="Логотип стоматологии Улыбка" class="logo__img">
+            </a>
+            <nav class="nav header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--dropdown">
+                        <a href="#" class="nav__link nav__link--with-icon">
+                            Клиника
+                            <svg class="nav__icon nav__icon--arrow" aria-hidden="true">
+                                <use xlink:href="@img/sprite.svg#icon-arrow-down"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Врачи</a>
+                    </li>
+                    <li class="nav__item nav__item--dropdown">
+                        <a href="#" class="nav__link nav__link--with-icon">
+                            Услуги и цены
+                            <svg class="nav__icon nav__icon--arrow" aria-hidden="true">
+                                <use xlink:href="@img/sprite.svg#icon-arrow-down"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Акции</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__search-button" aria-label="Поиск по сайту">
+                <svg class="header__search-icon" aria-hidden="true">
+                    <use xlink:href="@img/sprite.svg#icon-search"></use>
+                </svg>
+            </button>
+        </div>
     </div>
 </header>

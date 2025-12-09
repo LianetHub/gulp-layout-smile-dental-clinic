@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Страница услуги'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page">
+                <div class="container">
+                    <div class="service">
+                        <aside class="sidebar service__sidebar">
+                            <h3 class="sidebar__title">Клиника</h3>
+                            <nav class="sidebar-nav">
+                                <ul class="sidebar-nav__list">
+                                    <li class="sidebar-nav__item sidebar-nav__item--active">
+                                        <a href="#" class="sidebar-nav__link sidebar-nav__link--active">Современное лечение зубов и десен</a>
+                                    </li>
+                                    <li class="sidebar-nav__item">
+                                        <a href="#" class="sidebar-nav__link">Протезирование</a>
+                                    </li>
+                                    <li class="sidebar-nav__item">
+                                        <a href="#" class="sidebar-nav__link">Имплантация</a>
+                                    </li>
+                                    <li class="sidebar-nav__item">
+                                        <a href="#" class="sidebar-nav__link">Хирургия и удаление зубов</a>
+                                    </li>
+                                    <li class="sidebar-nav__item">
+                                        <a href="#" class="sidebar-nav__link">Детская стоматология</a>
+                                    </li>
+                                    <li class="sidebar-nav__item">
+                                        <a href="#" class="sidebar-nav__link">Отбеливание и чистка зубов</a>
+                                    </li>
+                                    <li class="sidebar-nav__item">
+                                        <a href="#" class="sidebar-nav__link">Рентгенодиагностика</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+
+                        <div class="content service__content">
+                            <h1 class="content__title">Современное лечение зубов и десен</h1>
+
+                            <section class="specialists content__section">
+                                <h2 class="visually-hidden">Специалисты по лечению зубов</h2>
+                                <div class="specialists__list">
+                                    <article class="specialist-card">
+                                        <div class="specialist-card__image-wrap">
+                                            <img src="specialist-1.jpg" alt="Фотография Ахмадуллина Руслана Рифгатовича" class="specialist-card__image">
+                                        </div>
+                                        <p class="specialist-card__name">Ахмадуллин Руслан Рифгатович</p>
+                                        <p class="specialist-card__specialty">врач стоматолог-хирург, имплантолог</p>
+                                    </article>
+                                    <article class="specialist-card">
+                                        <div class="specialist-card__image-wrap">
+                                            <img src="specialist-2.jpg" alt="Фотография Галстян Ларисы Вагановны" class="specialist-card__image">
+                                        </div>
+                                        <p class="specialist-card__name">Галстян Лариса Вагановна</p>
+                                        <p class="specialist-card__specialty">детский стоматолог, врач стоматолог-терапевт</p>
+                                    </article>
+                                </div>
+                            </section>
+
+                            <section class="price-list content__section">
+                                <h2 class="price-list__title">Цены на лечение зубов</h2>
+
+                                <div class="price-list__table">
+                                    <table class="price-table">
+                                        <caption class="price-table__caption">Лечение кариеса</caption>
+                                        <thead class="price-table__head">
+                                            <tr>
+                                                <th class="price-table__header">Услуга</th>
+                                                <th class="price-table__header price-table__header--price">Стоимость</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="price-table__body">
+                                            <tr>
+                                                <td class="price-table__item-name">Консультация врача-специалиста</td>
+                                                <td class="price-table__item-price">БЕСПЛАТНО</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="price-table__item-name">Лечение поверхностного кариеса</td>
+                                                <td class="price-table__item-price">3 500 РУБ.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="price-table">
+                                        <caption class="price-table__caption">Лечение пульпита</caption>
+                                        <tbody class="price-table__body">
+                                            <tr>
+                                                <td class="price-table__item-name">Лечение одноканального пульпита</td>
+                                                <td class="price-table__item-price">6 000 РУБ.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="price-table__item-name">Лечение двухканального пульпита</td>
+                                                <td class="price-table__item-price">8 000 РУБ.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="price-table">
+                                        <caption class="price-table__caption">Хирургия</caption>
+                                        <tbody class="price-table__body">
+                                            <tr>
+                                                <td class="price-table__item-name">Удаление зуба (простое)</td>
+                                                <td class="price-table__item-price">3 000 РУБ.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="price-table__item-name">Удаление зуба мудрости (сложное)</td>
+                                                <td class="price-table__item-price">8 000 РУБ.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </section>
+
+                            <section class="advantages content__section">
+                                <h2 class="visually-hidden">Преимущества клиники</h2>
+                                <ul class="advantages__list">
+                                    <li class="advantages__item">
+                                        <svg class="advantages__icon" aria-hidden="true">
+                                            <use xlink:href="@img/sprite.svg#icon-check"></use>
+                                        </svg>
+                                        Бесплатная консультация
+                                    </li>
+                                    <li class="advantages__item">
+                                        <svg class="advantages__icon" aria-hidden="true">
+                                            <use xlink:href="@img/sprite.svg#icon-check"></use>
+                                        </svg>
+                                        Гарантия на все виды лечения
+                                    </li>
+                                    <li class="advantages__item">
+                                        <svg class="advantages__icon" aria-hidden="true">
+                                            <use xlink:href="@img/sprite.svg#icon-check"></use>
+                                        </svg>
+                                        Лечение под микроскопом
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <div class="content__text-block">
+                                <p>
+                                    Подробный текст о лечении, технологиях и преимуществах, который занимает несколько абзацев на макете. Здесь размещается весь объемный контент, объясняющий услугу.
+                                </p>
+                                <p>
+                                    ...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                                </p>
+                            </div>
+
+                            <section class="service-cta content__section">
+                                <div class="service-cta__image-wrap">
+                                    <img src="doctor-smile.jpg" alt="Улыбающаяся женщина-врач" class="service-cta__image">
+                                </div>
+                                <div class="service-cta__content">
+                                    <p class="service-cta__text">Запишитесь на прием прямо сейчас</p>
+                                    <a href="#" class="button service-cta__button">ЗАПИСАТЬСЯ</a>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>
