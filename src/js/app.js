@@ -1,8 +1,6 @@
 "use strict";
 
-
 document.addEventListener("DOMContentLoaded", function () {
-
 
     const body = document.body;
     const headerMenu = document.querySelector('.header__menu');
@@ -15,6 +13,19 @@ document.addEventListener("DOMContentLoaded", function () {
     let originalIconHref = null;
     let crossIconHref = null;
 
+    if (searchToggler && searchForm) {
+        searchInput = searchForm.querySelector('.form__control');
+        const searchIconContainer = searchToggler.querySelector('.header__search-icon');
+        if (searchIconContainer) {
+            searchIconUse = searchIconContainer.querySelector('use');
+            if (searchIconUse) {
+                originalIconHref = searchIconUse.getAttribute('xlink:href');
+                if (originalIconHref) {
+                    crossIconHref = originalIconHref.replace('#icon-search', '#icon-cross');
+                }
+            }
+        }
+    }
 
     const closeAllSubmenus = (excludedArrow = null) => {
         const menuArrows = document.querySelectorAll('.menu__arrow');
@@ -29,81 +40,70 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const closeMobileMenu = () => {
-        if (headerMenu) {
-            headerMenu.classList.remove('active');
-        }
-        if (menuToggler) {
-            menuToggler.classList.remove('active');
-        }
+        if (headerMenu) headerMenu.classList.remove('active');
+        if (menuToggler) menuToggler.classList.remove('active');
         body.classList.remove('open-mobile-menu');
         closeAllSubmenus();
     };
 
     const openMobileMenu = () => {
         closeSearch();
-        if (headerMenu) {
-            headerMenu.classList.add('active');
-        }
-        if (menuToggler) {
-            menuToggler.classList.add('active');
-        }
+        if (headerMenu) headerMenu.classList.add('active');
+        if (menuToggler) menuToggler.classList.add('active');
         body.classList.add('open-mobile-menu');
     };
 
     const closeSearch = () => {
-        if (searchForm) {
-            searchForm.classList.remove('search--active');
-        }
+        if (searchForm) searchForm.classList.remove('search--active');
         if (searchIconUse && originalIconHref) {
             searchIconUse.setAttribute('xlink:href', originalIconHref);
         }
-        if (searchInput) {
-            searchInput.value = '';
-        }
+        if (searchInput) searchInput.value = '';
     };
 
     const openSearch = () => {
         closeMobileMenu();
-        if (searchForm) {
-            searchForm.classList.add('search--active');
-        }
+        if (searchForm) searchForm.classList.add('search--active');
         if (searchIconUse && crossIconHref) {
             searchIconUse.setAttribute('xlink:href', crossIconHref);
         }
         if (searchInput) {
-            setTimeout(() => {
-                searchInput.focus();
-            }, 300);
+            setTimeout(() => searchInput.focus(), 300);
         }
     };
 
+    const popups = document.querySelectorAll('.popup');
 
-    if (searchToggler && searchForm) {
-        searchInput = searchForm.querySelector('.form__control');
-        const searchIconContainer = searchToggler.querySelector('.header__search-icon');
+    const closePopup = () => {
+        popups.forEach(popup => {
+            popup.classList.remove('active');
+            popup.setAttribute('hidden', '');
+        });
+        body.classList.remove('popup-active');
+    };
 
-        if (searchIconContainer) {
-            searchIconUse = searchIconContainer.querySelector('use');
-            if (searchIconUse) {
-                originalIconHref = searchIconUse.getAttribute('xlink:href');
-                if (originalIconHref) {
-                    crossIconHref = originalIconHref.replace('#icon-search', '#icon-cross');
-                }
-            }
+    const openPopup = (modalId) => {
+        closeMobileMenu();
+        closeSearch();
+        closePopup();
+        const popup = document.querySelector(modalId);
+        if (popup) {
+            popup.classList.add('active');
+            popup.removeAttribute('hidden');
+            body.classList.add('popup-active');
         }
-    }
+    };
 
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' || event.keyCode === 27) {
+            closePopup();
+        }
+    });
 
     document.addEventListener('click', (event) => {
         const target = event.target;
 
-
-        const isSearchTogglerClick = searchToggler && searchToggler.contains(target);
-        const isMenuTogglerClick = menuToggler && menuToggler.contains(target);
-        const isMenuArrowClick = target.closest('.menu__arrow');
-
-
-        if (isSearchTogglerClick) {
+        if (searchToggler && searchToggler.contains(target)) {
             event.preventDefault();
             event.stopPropagation();
             if (searchForm.classList.contains('search--active')) {
@@ -111,7 +111,10 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 openSearch();
             }
-        } else if (isMenuTogglerClick) {
+            return;
+        }
+
+        if (menuToggler && menuToggler.contains(target)) {
             event.preventDefault();
             event.stopPropagation();
             if (body.classList.contains('open-mobile-menu')) {
@@ -119,52 +122,69 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 openMobileMenu();
             }
-        } else if (isMenuArrowClick) {
+            return;
+        }
+
+        const arrow = target.closest('.menu__arrow');
+        if (arrow) {
             event.preventDefault();
             event.stopPropagation();
-            const arrow = isMenuArrowClick;
             const parentItem = arrow.closest('.menu__item--parent');
             if (parentItem) {
                 const isOpened = parentItem.classList.contains('active');
-
                 closeAllSubmenus(isOpened ? null : arrow);
-
                 parentItem.classList.toggle('active', !isOpened);
+            }
+            return;
+        }
+
+        const popupOpenTrigger = target.closest('[data-modal-open]');
+        if (popupOpenTrigger) {
+            event.preventDefault();
+            openPopup(popupOpenTrigger.dataset.modalOpen || `#${popupOpenTrigger.getAttribute('href')}`);
+            return;
+        }
+
+        if (target.closest('[data-modal-close]')) {
+            event.preventDefault();
+            closePopup();
+            return;
+        }
+
+        if (searchForm && searchForm.classList.contains('search--active')) {
+            if (!searchForm.contains(target)) {
+                closeSearch();
             }
         }
 
-
-        const isSearchForm = searchForm && searchForm.contains(target);
-        const isMenu = headerMenu && headerMenu.contains(target);
-        const isSearchActive = searchForm && searchForm.classList.contains('search--active');
-        const isMenuOpen = body.classList.contains('open-mobile-menu');
-
-
-        if (isSearchActive && !isSearchForm && !isSearchTogglerClick) {
-            closeSearch();
+        if (body.classList.contains('open-mobile-menu')) {
+            if (headerMenu && !headerMenu.contains(target)) {
+                closeMobileMenu();
+            }
         }
 
-        if (isMenuOpen && !isMenu && !isMenuTogglerClick) {
-            closeMobileMenu();
+        if (body.classList.contains('popup-active')) {
+            if (!target.closest('.popup__body')) {
+                closePopup();
+            }
         }
 
-        if (!isMenuArrowClick && headerMenu && headerMenu.contains(target)) {
+        if (headerMenu && headerMenu.contains(target)) {
             closeAllSubmenus();
         }
-
     });
 
+    initSliders();
+    initPhoneMask();
+});
 
-    // init Sliders
-
+function initSliders() {
     if (document.querySelector('.hero__slider')) {
         new Swiper('.hero__slider', {
             effect: "fade",
             loop: true,
             speed: 800,
-            fadeEffect: {
-                crossFade: true
-            },
+            fadeEffect: { crossFade: true },
             autoplay: {
                 delay: 5000,
                 stopOnLastSlide: true,
@@ -174,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 el: '.hero__pagination',
                 clickable: true
             }
-        })
+        });
     }
 
     if (document.querySelector('.reviews__slider')) {
@@ -194,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     spaceBetween: 38,
                 }
             }
-        })
+        });
     }
 
     if (document.querySelector('.doctors__slider')) {
@@ -210,20 +230,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 clickable: true
             },
             breakpoints: {
-                576.98: {
-                    slidesPerView: 2,
-                    spaceBetween: 48,
-                },
-                991.98: {
-                    slidesPerView: 3,
-                    spaceBetween: 48,
-                },
-                1199.98: {
-                    slidesPerView: 3,
-                    spaceBetween: 96,
-                }
+                576.98: { slidesPerView: 2, spaceBetween: 48 },
+                991.98: { slidesPerView: 3, spaceBetween: 48 },
+                1199.98: { slidesPerView: 3, spaceBetween: 96 }
             }
-        })
+        });
     }
 
     if (document.querySelector('.values__slider')) {
@@ -243,8 +254,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     centeredSlides: false,
                 }
             }
-        })
+        });
     }
+
     if (document.querySelector('.news__slider')) {
         new Swiper('.news__slider', {
             spaceBetween: 20,
@@ -260,6 +272,77 @@ document.addEventListener("DOMContentLoaded", function () {
                     spaceBetween: 37,
                 }
             }
-        })
+        });
     }
-})
+}
+
+function initPhoneMask() {
+    const phoneInputs = document.querySelectorAll('input[type="tel"]');
+
+    const getInputNumbersValue = (input) => input.value.replace(/\D/g, '');
+
+    const onPhonePaste = (e) => {
+        const input = e.target;
+        const inputNumbersValue = getInputNumbersValue(input);
+        const pasted = e.clipboardData || window.clipboardData;
+        if (pasted) {
+            const pastedText = pasted.getData('Text');
+            if (/\D/g.test(pastedText)) {
+                input.value = inputNumbersValue;
+            }
+        }
+    };
+
+    const onPhoneInput = (e) => {
+        const input = e.target;
+        let inputNumbersValue = getInputNumbersValue(input);
+        const selectionStart = input.selectionStart;
+        let formattedInputValue = "";
+
+        if (!inputNumbersValue) {
+            input.value = "";
+            return;
+        }
+
+        if (input.value.length !== selectionStart) {
+            if (e.data && /\D/g.test(e.data)) {
+                input.value = inputNumbersValue;
+            }
+            return;
+        }
+
+        if (["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1) {
+            if (inputNumbersValue[0] === "9") inputNumbersValue = "7" + inputNumbersValue;
+            const firstSymbols = (inputNumbersValue[0] === "8") ? "8" : "+7";
+            formattedInputValue = firstSymbols + " ";
+            if (inputNumbersValue.length > 1) {
+                formattedInputValue += '(' + inputNumbersValue.substring(1, 4);
+            }
+            if (inputNumbersValue.length >= 5) {
+                formattedInputValue += ') ' + inputNumbersValue.substring(4, 7);
+            }
+            if (inputNumbersValue.length >= 8) {
+                formattedInputValue += '-' + inputNumbersValue.substring(7, 9);
+            }
+            if (inputNumbersValue.length >= 10) {
+                formattedInputValue += '-' + inputNumbersValue.substring(9, 11);
+            }
+        } else {
+            formattedInputValue = '+' + inputNumbersValue.substring(0, 16);
+        }
+        input.value = formattedInputValue;
+    };
+
+    const onPhoneKeyDown = (e) => {
+        const inputValue = e.target.value.replace(/\D/g, '');
+        if (e.keyCode === 8 && inputValue.length === 1) {
+            e.target.value = "";
+        }
+    };
+
+    phoneInputs.forEach(phoneInput => {
+        phoneInput.addEventListener('keydown', onPhoneKeyDown);
+        phoneInput.addEventListener('input', onPhoneInput, false);
+        phoneInput.addEventListener('paste', onPhonePaste, false);
+    });
+}

@@ -69,6 +69,17 @@
 			width: auto;
 		}
 	}
+	&__privacy {
+		margin-top: 0.25rem;
+		& a {
+			text-decoration: underline;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
 }
 
 .btn {

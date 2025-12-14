@@ -38,6 +38,21 @@ body {
 			}
 		}
 	}
+	&.popup-active {
+		overflow: hidden;
+		.wrapper {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba($color: #000000, $alpha: 0.5);
+				z-index: 100;
+			}
+		}
+	}
 }
 
 // ================== ОБОЛОЧКА ==============================
@@ -76,9 +91,9 @@ body {
 // =============== MODULES ====================
 // @import "./modules/preloader";
 @import "./modules/breads";
+@import "./modules/popup";
 // @import "./modules/animation";
 // @import "./modules/pagination";
-// @import "./modules/popup";
 // =============== MODULES ====================
 
 .doctor-card {

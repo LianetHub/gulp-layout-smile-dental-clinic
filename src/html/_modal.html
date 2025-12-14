@@ -1,0 +1,28 @@
+<div id="callback" class="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle" aria-describedby="popupSubtitle" hidden>
+    <div class="popup__body">
+        <h2 class="popup__title title" id="popupTitle">Запись на прием</h2>
+        <p class="popup__subtitle" id="popupSubtitle">Оставьте свой номер, и мы свяжемся с вами в течение 10 минут, чтобы подобрать удобное время для визита.</p>
+        <form action="#" class="popup__form form">
+            <div class="form__grid">
+                <div class="form__field form__field--large">
+                    <input type="text" name="name" placeholder="Ваше имя:" class="form__control" required>
+                </div>
+                <div class="form__field form__field--large">
+                    <input type="tel" name="phone" placeholder="Контактный телефон:" class="form__control" required>
+                </div>
+                <div class="form__field form__field--large">
+                    <textarea name="message" placeholder="Опишите вашу проблему:" class="form__control"></textarea>
+                </div>
+            </div>
+            <div class="form__privacy">
+                Отправляя данную форму вы соглашаетесь с <a href="#" target="_blank">политикой обработки персональных данных</a>
+            </div>
+            <button type="submit" class="form__btn btn btn-primary">Записаться</button>
+        </form>
+    </div>
+    <button type="button" data-modal-close aria-label="Закрыть окно записи на прием" class="popup__close">
+        <svg class="icon-block" aria-hidden="true">
+            <use xlink:href="@img/sprite.svg#icon-cross"></use>
+        </svg>
+    </button>
+</div>
