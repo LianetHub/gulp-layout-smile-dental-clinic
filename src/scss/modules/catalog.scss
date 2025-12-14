@@ -51,8 +51,8 @@
 		transition: background-color 0.3s ease, color 0.3s ease;
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: $pink;
-				color: $black;
+				background-color: $accent;
+				color: $text;
 			}
 		}
 	}
@@ -220,7 +220,7 @@
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				color: $pink;
+				color: $accent;
 				&::before {
 					transform: translateX(0.5rem);
 				}

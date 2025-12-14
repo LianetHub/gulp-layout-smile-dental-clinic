@@ -8,95 +8,137 @@
             @@include('html/_header.html', {})
             <main class="page">
                 <section class="hero">
-                    <div class="container">
-                        <div class="hero__slider swiper">
-                            <div class="swiper-wrapper">
-                                <div class="hero__slide swiper-slide">
-                                    <h1 class="hero__title title-lg">КТ зубов</h1>
-                                    <p class="hero__text">На дентальном томографе последнего поколения Vatech</p>
-                                    <a href="" class="hero__btn hero__btn--price btn btn-white">
-                                        <span class="hero__price-old">2 400</span> 2 100 РУБ.
-                                    </a>
-                                </div>
-                                <div class="hero__slide swiper-slide">
-                                    <div class="hero__title title-lg">Отбеливание зубов</div>
-                                    <p class="hero__text">С помощью лампы последнего поколения Beyond Polus</p>
-                                    <a href="#" class="hero__btn hero__btn--price btn btn-white">
-                                        <span class="hero__price-old">22 000</span> 17 900 РУБ.
-                                    </a>
-                                </div>
-                                <div class="hero__slide swiper-slide">
-                                    <div class="hero__title title-lg">Ортодонтическое лечение на элайнерах</div>
-                                    <a href="#" class="hero__btn hero__btn--price btn btn-white">
-                                        ОТ 55 000 РУБ.
-                                    </a>
+                    <div class="hero__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="hero__slide swiper-slide" style="background-image: url('@img/hero/slide-1.jpg');">
+                                <div class="container">
+                                    <div class="hero__offer">
+                                        <h1 class="hero__title title-lg">Отбеливание зубов</h1>
+                                        <p class="hero__text">С помощью лампы последнего поколения Beyond Polus</p>
+                                        <a href="#" class="hero__btn hero__btn--price btn btn-white btn-lg">
+                                            <span class="hero__price-old">22 000</span> 17 900 РУБ.
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="hero__pagination swiper-pagination"></div>
+                            <div class="hero__slide swiper-slide" style="background-image: url('@img/hero/slide-2.jpg');">
+                                <div class="container">
+                                    <div class="hero__offer">
+                                        <div class="hero__title title-lg">КТ зубов</div>
+                                        <p class="hero__text">На дентальном томографе последнего поколения Vatech</p>
+                                        <a href="" class="hero__btn hero__btn--price btn btn-white btn-lg">
+                                            <span class="hero__price-old">2 400</span> 2 100 РУБ.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero__slide swiper-slide" style="background-image: url('@img/hero/slide-3.jpg');">
+                                <div class="container">
+                                    <div class="hero__offer">
+                                        <div class="hero__title title-lg">Ортодонтическое лечение на элайнерах</div>
+                                        <a href="#" class="hero__btn hero__btn--price btn btn-white btn-lg">
+                                            ОТ 55 000 РУБ.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero__controls">
+                            <div class="container">
+                                <div class="hero__pagination swiper-pagination"></div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 <section class="reviews">
                     <div class="container">
-                        <h2 class="reviews__title title">
-                            Мы не размещаем на сайте положительные отзывы, скопированные с агрегаторов.
-                        </h2>
-                        <p class="reviews__subtitle">
-                            Мы убеждены: текстовые отзывы на сайте не вызывают доверия — их можно подделать.
-                        </p>
-
+                        <div class="reviews__header">
+                            <h2 class="reviews__title title">
+                                Мы не размещаем на сайте положительные отзывы, скопированные с агрегаторов.
+                            </h2>
+                            <p class="reviews__subtitle">
+                                Мы убеждены: текстовые отзывы на сайте не вызывают доверия — их можно подделать.
+                            </p>
+                        </div>
                         <ul class="reviews__list">
-                            <li class="review-card">
-                                <p class="review-card__count">190 отзывов</p>
+                            <li class="reviews__card">
+                                <div class="reviews__card-count">190 отзывов</div>
+                                <div class="reviews__card-image">
+                                    <img src="@img/rate/yandex.jpg" alt="Фото оценки в Яндексе">
+                                </div>
+                            </li>
+                            <li class="reviews__card">
+                                <div class="reviews__card-count">141 отзыв</div>
+                                <div class="reviews__card-image">
+                                    <img src="@img/rate/2gis.jpg" alt="Фото оценки в Яндексе">
+                                </div>
+                            </li>
+                            <li class="reviews__card">
+                                <div class="reviews__card-count">83 отзывов</div>
+                                <div class="reviews__card-image">
+                                    <img src="@img/rate/google.png" alt="Фото оценки в Яндексе">
+                                </div>
+                            </li>
+                            <li class="reviews__card">
+                                <div class="reviews__card-count">15 отзывов</div>
+                                <div class="reviews__card-image">
+                                    <img src="@img/rate/na-popravku.png" alt="Фото оценки в Яндексе">
+                                </div>
+                            </li>
+                            <li class="reviews__card">
+                                <div class="reviews__card-count">10 отзывов</div>
+                                <div class="reviews__card-image">
+                                    <img src="@img/rate/prodoctorov.png" alt="Фото оценки в Яндексе">
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </section>
 
                 <section class="services">
-                    <div class="container services__container">
-                        <div class="services__col services__col--menu">
-                            <h2 class="services__title">Услуги и цены</h2>
+                    <div class="container">
+                        <div class="services__content">
+                            <div class="services__main">
+                                <h2 class="services__title title-lg">Услуги и цены</h2>
 
-                            <nav class="services-nav">
-                                <ul class="services-nav__list">
-                                    <li class="services-nav__item">
-                                        <a href="#" class="services-nav__link">Лечение зубов</a>
-                                    </li>
-                                    <li class="services-nav__item">
-                                        <a href="#" class="services-nav__link">Протезирование зубов</a>
-                                    </li>
-                                    <li class="services-nav__item">
-                                        <a href="#" class="services-nav__link">Имплантация зубов</a>
-                                    </li>
-                                    <li class="services-nav__item">
-                                        <a href="#" class="services-nav__link">Хирургия и удаление зубов</a>
-                                    </li>
-                                    <li class="services-nav__item">
-                                        <a href="#" class="services-nav__link">Ортодонтия</a>
-                                    </li>
-                                    <li class="services-nav__item services-nav__item--active">
-                                        <a href="#" class="services-nav__link services-nav__link--active">Детская стоматология</a>
-                                    </li>
-                                    <li class="services-nav__item">
-                                        <a href="#" class="services-nav__link">Отбеливание и чистка зубов</a>
-                                    </li>
-                                    <li class="services-nav__item">
-                                        <a href="#" class="services-nav__link">Лазерная стоматология</a>
-                                    </li>
-                                    <li class="services-nav__item">
-                                        <a href="#" class="services-nav__link">Рентгенодиагностика</a>
-                                    </li>
-                                </ul>
-                            </nav>
+                                <nav aria-label="Меню услуг" class="services__nav">
+                                    <ul class="services__nav-list">
+                                        <li class="services__nav-item">
+                                            <a href="#" class="services__nav-link">Лечение зубов</a>
+                                        </li>
+                                        <li class="services__nav-item">
+                                            <a href="#" class="services__nav-link">Протезирование зубов</a>
+                                        </li>
+                                        <li class="services__nav-item">
+                                            <a href="#" class="services__nav-link">Имплантация зубов</a>
+                                        </li>
+                                        <li class="services__nav-item">
+                                            <a href="#" class="services__nav-link">Хирургия и удаление зубов</a>
+                                        </li>
+                                        <li class="services__nav-item">
+                                            <a href="#" class="services__nav-link">Ортодонтия</a>
+                                        </li>
+                                        <li class="services__nav-item">
+                                            <a href="#" class="services__nav-link">Детская стоматология</a>
+                                        </li>
+                                        <li class="services__nav-item">
+                                            <a href="#" class="services__nav-link">Отбеливание и чистка зубов</a>
+                                        </li>
+                                        <li class="services__nav-item">
+                                            <a href="#" class="services__nav-link">Лазерная стоматология</a>
+                                        </li>
+                                        <li class="services__nav-item">
+                                            <a href="#" class="services__nav-link">Рентгенодиагностика</a>
+                                        </li>
+                                    </ul>
+                                </nav>
 
-                            <a href="#" class="button services__all-button">Все услуги</a>
-                        </div>
+                                <a href="#" class="services__btn btn btn-primary btn-lg">Все услуги</a>
 
-                        <div class="services__col services__col--visual">
+                            </div>
                             <figure class="services__image">
-                                <img src="@img/services.jpg" alt="Девочка на приеме у детского стоматолога" class="services__image">
+                                <img src="@img/services.jpg" alt="Девочка на приеме у детского стоматолога" class="cover-image">
                             </figure>
                         </div>
                     </div>
@@ -104,149 +146,92 @@
 
                 <section class="doctors">
                     <div class="container doctors__container">
-                        <h2 class="doctors__title">Врачи стоматологии</h2>
+                        <h2 class="doctors__title title-lg">Врачи стоматологии</h2>
 
-                        <div class="doctors__slider swiper">
-                            <div class="swiper-wrapper">
-
-                                @@loop('./html/templates/_doctor-card.html', './html/json/doctors.json')
-
-
+                        <div class="doctors__content">
+                            <div class="doctors__slider swiper">
+                                <div class="swiper-wrapper">
+                                    @@loop('./html/templates/_doctor-card.html', './html/json/doctors.json')
+                                </div>
                             </div>
-
-                            <div class="doctors__nav-button doctors__nav-button--prev">
-                                <svg class="doctors__nav-icon" aria-hidden="true">
-                                    <use xlink:href="@img/sprite.svg#icon-arrow-left"></use>
-                                </svg>
-                            </div>
-                            <div class="doctors__nav-button doctors__nav-button--next">
-                                <svg class="doctors__nav-icon" aria-hidden="true">
-                                    <use xlink:href="@img/sprite.svg#icon-arrow-right"></use>
-                                </svg>
-                            </div>
-
+                            <button type="button" class="doctors__prev swiper-button-prev"></button>
+                            <button type="button" class="doctors__next swiper-button-next"></button>
                         </div>
                     </div>
                 </section>
 
                 <section class="values">
-                    <div class="container values__container">
-                        <h2 class="values__title">
-                            Делимся внутренней жизнью, чтобы вы <br> прониклись нашими ценностями
+                    <div class="container">
+                        <h2 class="values__title title">
+                            Делимся внутренней жизнью, чтобы вы прониклись нашими ценностями
                         </h2>
 
                         <ul class="values__grid">
-
-                            <li class="value-card">
-                                <a href="#" class="value-card__link" aria-label="Смотреть видео о высококлассном оборудовании">
-                                    <figure class="value-card__figure">
-                                        <img src="value-1.jpg" alt="Сотрудник демонстрирует модель челюсти" class="value-card__image">
-                                        <figcaption class="value-card__caption">
-                                            Высококлассное оборудование
-                                            <svg class="value-card__icon" aria-hidden="true">
-                                                <use xlink:href="@img/sprite.svg#icon-play"></use>
-                                            </svg>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </li>
-
-                            <li class="value-card">
-                                <a href="#" class="value-card__link" aria-label="Смотреть видео о персонале клиники">
-                                    <figure class="value-card__figure">
-                                        <img src="value-2.jpg" alt="Сотрудница клиники улыбается" class="value-card__image">
-                                        <figcaption class="value-card__caption">
-                                            Высококлассное оборудование
-                                            <svg class="value-card__icon" aria-hidden="true">
-                                                <use xlink:href="@img/sprite.svg#icon-play"></use>
-                                            </svg>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </li>
-
-                            <li class="value-card">
-                                <a href="#" class="value-card__link" aria-label="Смотреть видео о работе с микроскопом">
-                                    <figure class="value-card__figure">
-                                        <img src="value-3.jpg" alt="Врач работает с микроскопом" class="value-card__image">
-                                        <figcaption class="value-card__caption">
-                                            Высококлассное оборудование
-                                            <svg class="value-card__icon" aria-hidden="true">
-                                                <use xlink:href="@img/sprite.svg#icon-play"></use>
-                                            </svg>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </li>
-
-                            <li class="value-card">
-                                <a href="#" class="value-card__link" aria-label="Смотреть видео о детской стоматологии">
-                                    <figure class="value-card__figure">
-                                        <img src="value-4.jpg" alt="Радостный детский стоматолог с шариком" class="value-card__image">
-                                        <figcaption class="value-card__caption">
-                                            Высококлассное оборудование
-                                            <svg class="value-card__icon" aria-hidden="true">
-                                                <use xlink:href="@img/sprite.svg#icon-play"></use>
-                                            </svg>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </li>
-
+                            @@loop('./html/templates/_value-card.html', './html/json/values.json')
                         </ul>
                     </div>
                 </section>
 
                 <section class="about">
-                    <div class="container about__container">
+                    <div class="container">
                         <div class="about__content">
-                            <h2 class="about__title">О клинике</h2>
-                            <div class="about__text">
+                            <h2 class="about__title title">О клинике</h2>
+                            <div class="about__text article-block">
                                 <p>
-                                    Частная стоматологическая клиника "Улыбка" приглашает Вас пройти осмотр и получить квалифицированную консультацию по уходу за полостью рта у опытного специалиста. Профессиональные советы эксперта помогут создать превосходный внешний вид и сохранить крепкое здоровье на многие годы. Цены в стоматологических клиниках Санкт-Петербурга не всегда могут похвастаться доступностью, а иногда и адекватностью, но только не у нас.
+                                    Частная стоматологическая клиника "Улыбка" приглашает Вас пройти&nbsp;осмотр и получить квалифицированную консультацию по уходу за полостью рта у опытного специалиста.
+                                    Профессиональные советы эксперта помогут создать превосходный внешний вид и сохранить крепкое здоровье на многие годы.
+                                    <a href="">Цены</a> в стоматологических клиниках Санкт-Петербурга не всегда могут похвастаться доступностью, а иногда и адекватностью, но только не у нас.
                                 </p>
                                 <p>
-                                    Естественно, у Вас может возникнуть вопрос: чем "Улыбка" отличается от конкурентов? Как и все хорошие стоматологические клиники в СПб, мы больше предлагаем, чем обещаем, гарантируем вместо рекламы и обеспечиваем своим преимуществами, а не рассказываем о недостатках других. Наше главное достоинство - это профессиональный и заботливый персонал. Люди, работающие по призванию, всегда делают больше и лучше, чем те, кто занят зарабатыванием денег.
+                                    Естественно, у Вас может возникнуть вопрос: чем "Улыбка" отличается от конкурентов?
+                                    Как и все хорошие стоматологические клиники в СПб, мы больше предлагаем, чем обещаем, гарантируем вместо рекламы и обеспечиваем своим преимуществами,
+                                    а не рассказываем о недостатках других. Наше главное достоинство - это профессиональный и заботливый <a href="">персонал</a>.
+                                    Люди, работающие по призванию, всегда делают больше и лучше, чем те, кто занят зарабатыванием денег.
                                 </p>
                             </div>
-                            <a href="#" class="button about__btn">Отзывы пациентов</a>
+                            <a href="#" class="about__btn btn btn-primary btn-lg">Отзывы пациентов</a>
                         </div>
-                        <figure class="about__image">
-                            <img src="testimonials.jpg" alt="Интерьер приемной стоматологической клиники" class="cover-image">
-                        </figure>
                     </div>
                 </section>
 
                 <section class="news">
-                    <div class="container news__container">
-                        <h2 class="news__title">Новости</h2>
+                    <div class="container">
+                        <h2 class="news__title title">Новости</h2>
 
-                        <div class="news__grid">
+                        <ul class="news__grid">
 
-                            <article class="news-card">
-                                <div class="news-card__date">04.03.2025</div>
-                                <h3 class="news-card__title">Список документов для справок в налоговую инспекцию.</h3>
-                                <a href="#" class="news-card__link" aria-label="Подробнее о списке документов для справок в налоговую инспекцию."></a>
-                            </article>
+                            <li class="news__card">
+                                <time datetime="2025-03-04" class="news__card-date">04.03.2025</time>
+                                <h3 class="news__card-title">
+                                    <a href="" class="news__card-link">
+                                        Список документов для справок в налоговую инспекцию.
+                                    </a>
+                                </h3>
+                            </li>
 
-                            <article class="news-card">
-                                <div class="news-card__date">30.09.2020</div>
-                                <h3 class="news-card__title">Интраоральный 3D-сканер Medit i500</h3>
-                                <a href="#" class="news-card__link" aria-label="Подробнее об интраоральном 3D-сканере Medit i500"></a>
-                            </article>
+                            <li class="news__card">
+                                <time datetime="2020-09-30" class="news__card-date">30.09.2020</time>
+                                <h3 class="news__card-title">
+                                    <a href="" class="news__card-link">
+                                        Интраоральный 3D-сканер Medit i500
+                                    </a>
+                                </h3>
+                            </li>
 
-                            <article class="news-card">
-                                <div class="news-card__date">11.09.2020</div>
-                                <h3 class="news-card__title">Лечение на элайнерах стало доступным</h3>
-                                <a href="#" class="news-card__link" aria-label="Подробнее о лечении на элайнерах"></a>
-                            </article>
+                            <li class="news__card">
+                                <time datetime="2020-09-11" class="news__card-date">11.09.2020</time>
+                                <h3 class="news__card-title">
+                                    <a href="" class="news__card-link">
+                                        Лечение на элайнерах стало доступным
+                                    </a>
+                                </h3>
+                            </li>
+                        </ul>
 
-                        </div>
-
-                        <a href="#" class="news__all-link">
-                            ВСЕ НОВОСТИ
-                            <svg class="news__arrow-icon" aria-hidden="true">
-                                <use xlink:href="@img/sprite.svg#icon-arrow-right-small"></use>
+                        <a href="#" class="news__more">
+                            Все новости
+                            <svg class="news__arrow-icon icon-block" aria-hidden="true">
+                                <use xlink:href="@img/sprite.svg#icon-double-arrow"></use>
                             </svg>
                         </a>
                     </div>

@@ -7,7 +7,7 @@
 			visibility: visible;
 		}
 		.dropdown__button {
-			border: rem(1) solid $pink;
+			border: rem(1) solid $accent;
 			&::before {
 				transform: rotate(-180deg);
 			}

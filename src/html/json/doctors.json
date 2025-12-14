@@ -1,61 +1,61 @@
 [
     {
-        "image": "/upload/resize_cache/iblock/063/187_187_2/063ce2a0b3a506f3e175f467096a4105.jpg",
+        "image": "@img/doctors/zavialov-andrei-sergeevich.jpg",
         "name": "Завьялов Андрей Сергеевич",
         "specialty": "врач стоматолог-ортопед, глав. врач"
     },
     {
-        "image": "/upload/resize_cache/iblock/117/187_187_2/117ff0642d78a12d3e911fe4ef35d1b8.jpg",
+        "image": "@img/doctors/akhmadullin-ruslan-rifgatovich.jpg",
         "name": "Ахмадуллин Руслан Рифгатович",
         "specialty": "врач стоматолог-хирург, имплантолог"
     },
     {
-        "image": "/upload/resize_cache/iblock/018/187_187_2/018f3066e65026c2789a79e180bc9d0a.jpg",
+        "image": "@img/doctors/galstian-larisa-vaganovna.jpg",
         "name": "Галстян Лариса Вагановна",
         "specialty": "детский стоматолог, врач стоматолог-терапевт"
     },
     {
-        "image": "/upload/resize_cache/iblock/a9e/187_187_2/a9e886c3cf6896f8fa92999051a61eca.jpg",
+        "image": "@img/doctors/gogoleva-elena-leonidovna.jpg",
         "name": "Гоголева Елена Леонидовна",
         "specialty": "врач стоматолог-терапевт, врач стоматолог-хирург"
     },
     {
-        "image": "/upload/resize_cache/iblock/555/187_187_2/55516551d7f628ad4bd73c9b14253f12.jpg",
+        "image": "@img/doctors/emtsova-evgeniia-olegovna.jpg",
         "name": "Емцова Евгения Олеговна",
         "specialty": "врач стоматолог-ортодонт"
     },
     {
-        "image": "/upload/resize_cache/iblock/94f/187_187_2/94f47f40180ed8517150131cdc4319c6.JPG",
+        "image": "@img/doctors/kolkova-nataliia-viktorovna.jpg",
         "name": "Колкова Наталия Викторовна",
         "specialty": "врач стоматолог-ортопед"
     },
     {
-        "image": "/upload/resize_cache/iblock/b5c/187_187_2/b5cefcec9f2c853df87a99bb05eea0e6.jpg",
+        "image": "@img/doctors/savchuk-viktoriia-valerievna.jpg",
         "name": "Савчук Виктория Валерьевна",
         "specialty": "врач стоматолог-ортопед"
     },
     {
-        "image": "/upload/resize_cache/iblock/80f/187_187_2/80feb0e3b378291532deec43570e44ea.jpg",
+        "image": "@img/doctors/tarasova-zhanna-andreevna.jpg",
         "name": "Тарасова Жанна Андреевна",
         "specialty": "врач стоматолог-терапевт"
     },
     {
-        "image": "/upload/iblock/19d/19d2ad7d5175208edc697da50b75116c.jpg",
+        "image": "@img/doctors/tereshonok-olga-vitalievna.jpg",
         "name": "Терешонок Ольга Витальевна",
         "specialty": "детский стоматолог, врач стоматолог-терапевт"
     },
     {
-        "image": "/upload/resize_cache/iblock/012/187_187_2/0122fa54321dc94ddb484dd6a01a189d.jpg",
+        "image": "@img/doctors/tikhomirova-arina-igorevna.jpg",
         "name": "Тихомирова Арина Игоревна",
         "specialty": "гигиенист стоматологический"
     },
     {
-        "image": "/upload/resize_cache/iblock/21e/187_187_2/n715kguu2jewl0s4r8u9skbxbo6jzleo.jpg",
+        "image": "@img/doctors/konovalova-valeriia-valerievna.jpg",
         "name": "Коновалова Валерия Валерьевна",
         "specialty": "врач-стоматолог"
     },
     {
-        "image": "/upload/resize_cache/iblock/42a/187_187_2/ihei988f8g91ptkz5dpdn6c6d6nf1b7i.jpeg",
+        "image": "@img/doctors/malkin-anatolii-igorevich.jpg",
         "name": "Малкин Анатолий Игоревич",
         "specialty": "врач стоматолог-ортопед"
     }
