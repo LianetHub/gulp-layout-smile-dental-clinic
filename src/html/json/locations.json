@@ -1,0 +1,20 @@
+[
+    {
+        "poster": "@img/locations/veteranov.png",
+        "alt": "Фасад филиала Ветеранов 130",
+        "title": "Филиал Ветеранов 130",
+        "address": "Санкт-Петербург, пр. Ветеранов 130",
+        "phone": "(812) 501-26-44",
+        "phoneFormatted": "+78125012644",
+        "footer": "map"
+    },
+    {
+        "poster": "@img/locations/dachny.jpg",
+        "alt": "Фасад филиала Дачный 14к3",
+        "title": "Филиал Дачный 14к3",
+        "address": "Санкт-Петербург, Дачный пр 14к3",
+        "phone": "(812) 612-32-20",
+        "phoneFormatted": "+78126123220",
+        "footer": "metro"
+    }
+]

@@ -1,0 +1,56 @@
+<div class="locations__office">
+    <div class="locations__office-image">
+        <img src="@@poster" alt="@@alt" class="locations__office__image">
+    </div>
+    <div class="locations__office-body">
+        <h3 class="locations__office-title title">@@title</h3>
+        <div class="locations__office-info">
+            <div class="locations__office-item">
+                <svg class="locations__office-icon icon-block" aria-hidden="true">
+                    <use xlink:href="@img/sprite.svg#icon-location"></use>
+                </svg>
+                <address class="locations__office-text">@@address</address>
+            </div>
+            <div class="locations__office-item">
+                <svg class="locations__office-icon icon-block" aria-hidden="true">
+                    <use xlink:href="@img/sprite.svg#icon-phone-fill"></use>
+                </svg>
+                <p class="locations__office-text">
+                    Тел.:
+                    <a href="tel:@@phoneFormatted" class="locations__office-link bold-link">@@phone</a>
+                </p>
+            </div>
+            <div class="locations__office-item">
+                <svg class="locations__office-icon icon-block" aria-hidden="true">
+                    <use xlink:href="@img/sprite.svg#icon-email"></use>
+                </svg>
+                <p class="locations__office-text">
+                    E-mail:
+                    <a href="mailto:stom-ulibka@mail.ru" class="locations__office-link">stom-ulibka@mail.ru</a>
+                </p>
+            </div>
+            <div class="locations__office-item">
+                <svg class="locations__office-icon icon-block" aria-hidden="true">
+                    <use xlink:href="@img/sprite.svg#icon-clock"></use>
+                </svg>
+                <p class="locations__office-text">Режим работы: Пн-Вс: 9:00-21:00</p>
+            </div>
+            @@if(footer === 'map') {
+            <div class="locations__office-item">
+                <svg class="locations__office-icon icon-block" aria-hidden="true">
+                    <use xlink:href="@img/sprite.svg#icon-map"></use>
+                </svg>
+                <a href="" class="locations__office-map-link">Посмотреть на карте</a>
+            </div>
+            }
+            @@if(footer === 'metro') {
+            <div class="locations__office-item">
+                <svg class="locations__office-icon icon-block" aria-hidden="true">
+                    <use xlink:href="@img/sprite.svg#icon-subway"></use>
+                </svg>
+                <a href="" class="locations__office-map-link">Как добраться от метро?</a>
+            </div>
+            }
+        </div>
+    </div>
+</div>

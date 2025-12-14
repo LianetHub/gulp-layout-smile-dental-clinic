@@ -5,112 +5,39 @@
     })
     <body>
         <div class="wrapper">
-            @@include('html/_header.html', {})
+            @@include('html/_header.html', {
+            "active": 5
+            })
             <main class="page">
-                <section class="locations">
-                    <div class="container locations__container">
-
-                        <div class="locations__branches">
-                            <h2 class="visually-hidden">Филиалы клиники</h2>
-
-                            <article class="branch-card branch-card--veteranov">
-                                <div class="branch-card__image-wrap">
-                                    <img src="branch-veteranov.jpg" alt="Фасад филиала Ветеранов 130" class="branch-card__image">
-                                </div>
-                                <h3 class="branch-card__title">Филиал Ветеранов 130</h3>
-                                <address class="branch-card__contacts">
-                                    <div class="branch-contact">
-                                        <svg class="branch-contact__icon" aria-hidden="true">
-                                            <use xlink:href="@img/sprite.svg#icon-location"></use>
-                                        </svg>
-                                        <p class="branch-contact__text">Санкт-Петербург, пр. Ветеранов 130</p>
-                                    </div>
-                                    <div class="branch-contact">
-                                        <svg class="branch-contact__icon" aria-hidden="true">
-                                            <use xlink:href="@img/sprite.svg#icon-phone"></use>
-                                        </svg>
-                                        <a href="tel:+78125012644" class="branch-contact__link">Тел.: (812) 501-26-44</a>
-                                    </div>
-                                    <div class="branch-contact">
-                                        <svg class="branch-contact__icon" aria-hidden="true">
-                                            <use xlink:href="@img/sprite.svg#icon-email"></use>
-                                        </svg>
-                                        <a href="mailto:stom-ulibka@mail.ru" class="branch-contact__link">E-mail: stom-ulibka@mail.ru</a>
-                                    </div>
-                                    <div class="branch-contact">
-                                        <svg class="branch-contact__icon" aria-hidden="true">
-                                            <use xlink:href="@img/sprite.svg#icon-clock"></use>
-                                        </svg>
-                                        <p class="branch-contact__text">Режим работы: Пн-Вс: 9:00-21:00</p>
-                                    </div>
-                                </address>
-                                <a href="#" class="branch-card__map-link">
-                                    <svg class="branch-card__map-icon" aria-hidden="true">
-                                        <use xlink:href="@img/sprite.svg#icon-map"></use>
-                                    </svg>
-                                    Посмотреть на карте
-                                </a>
-                            </article>
-
-                            <article class="branch-card branch-card--dachny">
-                                <div class="branch-card__image-wrap">
-                                    <img src="branch-dachny.jpg" alt="Фасад филиала Дачный 14к3" class="branch-card__image">
-                                </div>
-                                <h3 class="branch-card__title">Филиал Дачный 14к3</h3>
-                                <address class="branch-card__contacts">
-                                    <div class="branch-contact">
-                                        <svg class="branch-contact__icon" aria-hidden="true">
-                                            <use xlink:href="@img/sprite.svg#icon-location"></use>
-                                        </svg>
-                                        <p class="branch-contact__text">Санкт-Петербург, Дачный пр 14к3</p>
-                                    </div>
-                                    <div class="branch-contact">
-                                        <svg class="branch-contact__icon" aria-hidden="true">
-                                            <use xlink:href="@img/sprite.svg#icon-phone"></use>
-                                        </svg>
-                                        <a href="tel:+78126123220" class="branch-contact__link">Тел.: (812) 612-32-20</a>
-                                    </div>
-                                    <div class="branch-contact">
-                                        <svg class="branch-contact__icon" aria-hidden="true">
-                                            <use xlink:href="@img/sprite.svg#icon-email"></use>
-                                        </svg>
-                                        <a href="mailto:stom-ulibka@mail.ru" class="branch-contact__link">E-mail: stom-ulibka@mail.ru</a>
-                                    </div>
-                                    <div class="branch-contact">
-                                        <svg class="branch-contact__icon" aria-hidden="true">
-                                            <use xlink:href="@img/sprite.svg#icon-clock"></use>
-                                        </svg>
-                                        <p class="branch-contact__text">Режим работы: Пн-Вс: 9:00-21:00</p>
-                                    </div>
-                                </address>
-                                <a href="#" class="branch-card__map-link">
-                                    <svg class="branch-card__map-icon" aria-hidden="true">
-                                        <use xlink:href="@img/sprite.svg#icon-subway"></use>
-                                    </svg>
-                                    Как добраться от метро?
-                                </a>
-                            </article>
+                <div class="locations">
+                    <div class="container ">
+                        <div class="locations__offices">
+                            @@loop('./html/templates/_location.html', './html/json/locations.json')
                         </div>
-
-                        <section class="locations__form-section">
-                            <div class="locations__doctor-image-wrap">
-                                <img src="doctor-form.jpg" alt="Улыбающийся врач с моделью зубов" class="locations__doctor-image">
+                    </div>
+                </div>
+                <section class="feedback">
+                    <div class="container">
+                        <div class="feedback__body">
+                            <div class="feedback__image">
+                                <img src="@img/doctor-form.png" alt="Улыбающийся врач с моделью зубов">
                             </div>
-
-                            <div class="feedback-form">
-                                <h2 class="feedback-form__title">Обратная связь</h2>
-                                <form action="#" method="POST" class="feedback-form__form">
-                                    <div class="feedback-form__fields">
-                                        <input type="text" name="name" placeholder="Ваше имя:" class="feedback-form__input feedback-form__input--name" required>
-                                        <input type="tel" name="phone" placeholder="Контактный телефон:" class="feedback-form__input feedback-form__input--phone" required>
+                            <form action="#" class="feedback__form form">
+                                <h2 class="form__caption">Обратная связь</h2>
+                                <div class="form__grid">
+                                    <div class="form__field">
+                                        <input type="text" name="name" placeholder="Ваше имя:" class="form__control" required>
                                     </div>
-                                    <textarea name="message" placeholder="Ваше сообщение:" class="feedback-form__textarea" rows="4"></textarea>
-
-                                    <button type="submit" class="button feedback-form__button">ОТПРАВИТЬ ЗАЯВКУ</button>
-                                </form>
-                            </div>
-                        </section>
-
+                                    <div class="form__field">
+                                        <input type="tel" name="phone" placeholder="Контактный телефон:" class="form__control" required>
+                                    </div>
+                                    <div class="form__field form__field--large">
+                                        <textarea name="message" placeholder="Ваше сообщение:" class="form__control"></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" class="form__btn btn btn-primary btn-lg">Отправить заявку</button>
+                            </form>
+                        </div>
                     </div>
                 </section>
             </main>

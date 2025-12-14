@@ -37,6 +37,38 @@
 			resize: none;
 		}
 	}
+	// .form__caption
+	&__caption {
+		font-size: 1.9375rem;
+		font-weight: 700;
+		line-height: 130%;
+	}
+	// .form__grid
+	&__grid {
+		margin-top: rem(23);
+		display: grid;
+		gap: rem(12);
+		@media (min-width: $md3) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	// .form__field
+	&__field {
+		&.form__field--large {
+			@media (min-width: $md3) {
+				grid-column: span 2;
+			}
+		}
+	}
+
+	// .form__btn
+	&__btn {
+		margin-top: rem(12);
+		width: 100%;
+		@media (min-width: $md5) {
+			width: auto;
+		}
+	}
 }
 
 .btn {
