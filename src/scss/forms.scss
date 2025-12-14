@@ -9,10 +9,11 @@
 		color: #334b59;
 		font-family: $font-inter;
 		font-size: 1rem;
-		font-style: normal;
-		font-weight: 400;
 		line-height: 160%;
-
+		border-radius: 0.375rem;
+		border: 1px solid rgba(51, 75, 89, 0.3);
+		background: #fff;
+		padding: 0.75rem 1.06rem;
 		&::placeholder {
 			color: #334b59;
 			opacity: 0.5;
@@ -53,11 +54,16 @@
 	letter-spacing: 0.04375rem;
 	text-transform: uppercase;
 	border-radius: 0.375rem;
-	padding: 1rem 1.275rem;
-	min-height: rem(52);
 	border-width: rem(2);
 	border-style: solid;
 	gap: 0.5rem;
+	min-height: rem(44);
+	padding: 0.65rem 1rem;
+
+	@media (min-width: $md4) {
+		min-height: rem(52);
+		padding: 1rem 1.275rem;
+	}
 
 	&:focus-visible {
 		box-shadow: 0 0 rem(1) rem(1) $text;
@@ -78,19 +84,33 @@
 		}
 	}
 
-	&.btn-white {
-		border-color: #fff;
-		background: #fff;
-		color: #00b4dd;
+	&.btn-price {
+		border-color: #00b4dd;
+		background: #00b4dd;
+		color: #ffffff;
+
 		&:hover {
 			background: #00a3c8;
 			border-color: #00a3c8;
-			color: #fff;
 		}
 		&:active {
 			background: #00b4dd;
 			border-color: #00b4dd;
-			color: #fff;
+		}
+		@media (min-width: $md4) {
+			border-color: #fff;
+			background: #fff;
+			color: #00b4dd;
+			&:hover {
+				background: #00a3c8;
+				border-color: #00a3c8;
+				color: #fff;
+			}
+			&:active {
+				background: #00b4dd;
+				border-color: #00b4dd;
+				color: #fff;
+			}
 		}
 	}
 

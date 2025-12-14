@@ -61,68 +61,132 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 	position: relative;
 	// .hero__slider
 	&__slider {
-		// color: #fff;
-		background: #00b4dd;
-		color: #fff;
-		position: relative;
-		z-index: 1;
+		@media (min-width: $md4) {
+			background: #00b4dd;
+			color: #fff;
+			position: relative;
+			z-index: 1;
+		}
 	}
 	// .hero__slide
 	&__slide {
-		min-height: rem(671);
-		color: #fff;
+		position: relative;
+
 		height: auto;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		padding: rem(175) 0;
-		.container {
-			width: 100%;
+		@media (min-width: $md4) {
+			display: flex;
+			align-items: center;
+			.container {
+				flex: 1 1 auto;
+			}
+			padding: rem(50) 0;
+			min-height: rem(450);
+		}
+		@media (min-width: $md3) {
+			padding: rem(100) 0;
+			min-height: rem(550);
+		}
+		@media (min-width: $md2) {
+			min-height: rem(671);
+			padding: rem(175) 0;
 		}
 	}
+	// .hero__image
+	&__image {
+		& img {
+			min-height: rem(292);
+		}
+		margin: 0 -1rem;
+		@media (min-width: $md4) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			z-index: -1;
+		}
+	}
+	// .hero__offer
 	&__offer {
-		max-width: 35.3125rem;
-		padding: rem(25) 0 rem(65);
+		padding: rem(30) 0 1.56rem;
+		text-align: center;
+		@media (min-width: $md4) {
+			text-align: left;
+			padding: rem(25) 0 rem(65);
+			max-width: rem(400);
+		}
+		@media (min-width: $md3) {
+			max-width: 35.3125rem;
+		}
 	}
 	// .hero__title
 	&__title {
-		font-size: 3.125rem;
 		font-weight: 700;
 		line-height: 130%;
+		font-size: 2rem;
+		@media (min-width: $md4) {
+			font-size: 2.75rem;
+		}
+		@media (min-width: $md3) {
+			font-size: 3.125rem;
+		}
 	}
 	// .hero__text
 	&__text {
-		margin-top: 1.25rem;
 		font-family: $font-inter;
 		font-size: 1.125rem;
 		line-height: 160%;
+		margin-top: 0.875rem;
+		max-width: 95%;
+		@media (min-width: $md4) {
+			max-width: 100%;
+			margin-top: 1.25rem;
+		}
 	}
 	// .hero__btn
 	&__btn {
-		margin-top: 2.37rem;
+		margin-top: 1.125rem;
+		@media (min-width: $md4) {
+			margin-top: 2.37rem;
+		}
 	}
-	// .hero__btn--price
-	&__btn--price {
-	}
+
 	// .hero__price-old
 	&__price-old {
 		text-decoration: line-through;
 	}
 	// .hero__controls
 	&__controls {
-		position: absolute;
-		bottom: rem(178);
-		left: 0;
-		width: 100%;
-		z-index: 2;
+		@media (min-width: $md4) {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			z-index: 2;
+			bottom: rem(50);
+		}
+		@media (min-width: $md3) {
+			bottom: rem(100);
+		}
+		@media (min-width: $md2) {
+			bottom: rem(178);
+		}
+	}
+	&__pagination {
+		&.swiper-pagination {
+			justify-content: center;
+			@media (min-width: $md4) {
+				justify-content: flex-start;
+			}
+		}
 	}
 }
 
 .reviews {
-	padding: rem(100) 0;
+	padding: rem(75) 0 rem(47);
+	@media (min-width: $md2) {
+		padding: rem(100) 0;
+	}
 	// .reviews__header
 	&__header {
 		max-width: rem(835);
@@ -131,26 +195,48 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 	}
 	// .reviews__title
 	&__title {
+		line-height: 140%;
+		@media (max-width: $md3) {
+			line-height: 130%;
+			font-size: rem(28);
+		}
+		@media (max-width: $md4) {
+			font-size: rem(22);
+		}
 	}
 	// .reviews__subtitle
 	&__subtitle {
 		margin-top: 1.37rem;
 		font-family: $font-inter;
-		font-size: 1.125rem;
 		line-height: 160%;
+		@media (min-width: $md4) {
+			font-size: 1.125rem;
+		}
 	}
-	// .reviews__list
-	&__list {
-		margin-top: rem(77);
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		gap: rem(38);
+	// .reviews__slider
+	&__slider {
+		overflow: visible;
+		margin-top: rem(35);
+		@media (min-width: $md4) {
+			margin-top: rem(77);
+		}
+	}
+	// .reviews__pagination
+	&__pagination {
+		margin-top: rem(37);
+		justify-content: center;
 	}
 	// .reviews__card
 	&__card {
 		border-radius: 0.625rem;
 		background: #fff;
 		overflow: hidden;
+		&.swiper-slide {
+			width: rem(219);
+			@media (min-width: $md2) {
+				width: 100%;
+			}
+		}
 	}
 	// .reviews__card-count
 	&__card-count {
@@ -169,14 +255,26 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 }
 
 .services {
-	padding: rem(45) 0 rem(126);
+	padding: rem(10) 0 rem(41);
+	@media (min-width: $md4) {
+		padding: rem(45) 0 rem(126);
+	}
 	// .services__content
 	&__content {
 		display: flex;
+		flex-direction: column-reverse;
+		row-gap: rem(43);
+		@media (min-width: $md3) {
+			flex-direction: row;
+		}
 	}
 	// .services__main
 	&__main {
-		flex: 1 1 auto;
+		text-align: center;
+		@media (min-width: $md3) {
+			flex: 1 1 auto;
+			text-align: left;
+		}
 	}
 	// .services__title
 	&__title {
@@ -189,8 +287,10 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 	// .services__nav-list
 	&__nav-list {
 		margin-top: 1.62rem;
-		max-width: 23.5rem;
-		margin-left: -1rem;
+		@media (min-width: $md3) {
+			max-width: 23.5rem;
+			margin-left: -1rem;
+		}
 	}
 	// .services__nav-item
 	&__nav-item {
@@ -217,16 +317,27 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 	}
 	// .services__image
 	&__image {
-		width: 44.5rem;
 		flex-shrink: 0;
 		overflow: hidden;
-		border-radius: 0.625rem;
+		margin: 0 -1rem;
+		@media (min-width: $md3) {
+			width: 100%;
+			border-radius: 0.625rem;
+			margin: 0;
+			width: 30rem;
+		}
+		@media (min-width: $md2) {
+			width: 44.5rem;
+		}
 	}
 }
 
 .doctors {
 	background: #e7ecf1;
-	padding: 4.94rem 0 6.75rem;
+	padding: rem(48) 0;
+	@media (min-width: $md4) {
+		padding: 4.94rem 0 6.75rem;
+	}
 	// .doctors__container
 	&__container {
 	}
@@ -236,22 +347,49 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 	}
 	// .doctors__content
 	&__content {
-		margin-top: rem(77);
-		padding: 0 rem(67);
 		position: relative;
+		margin-top: rem(30);
+		@media (min-width: $md4) {
+			margin-top: rem(77);
+		}
+		@media (min-width: $md3) {
+			padding: 0 rem(90);
+		}
+		@media (min-width: $md1) {
+			padding: 0 rem(67);
+		}
 	}
 	// .doctors__slider
 	&__slider {
 	}
 	// .doctors__prev
 	&__prev {
-		left: -1rem;
+		@media (max-width: $md3) {
+			display: none;
+		}
+		@media (min-width: $md1) {
+			&.swiper-button-prev {
+				left: -2rem;
+			}
+		}
 	}
-
 	// .doctors__next
 	&__next {
-		&.swiper-button-next {
-			right: -2rem;
+		@media (max-width: $md3) {
+			display: none;
+		}
+		@media (min-width: $md1) {
+			&.swiper-button-next {
+				right: -2rem;
+			}
+		}
+	}
+	&__pagination {
+		margin-top: rem(37);
+		&.swiper-pagination {
+			@media (min-width: $md3) {
+				display: none !important;
+			}
 		}
 	}
 }
@@ -263,8 +401,9 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 	text-align: center;
 	// .doctor-card__image
 	&__image {
-		width: 14.375rem;
-		height: 14.375rem;
+		aspect-ratio: 1;
+		width: 100%;
+		max-width: rem(230);
 		background: #fff;
 		border-radius: 50%;
 		overflow: hidden;
@@ -279,38 +418,61 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 	}
 	// .doctor-card__specialty
 	&__specialty {
-		margin-top: 0.125rem;
 		font-family: $font-inter;
 		font-size: 1rem;
 		line-height: 150%;
-		max-width: 18.8rem;
+		margin-top: 0.725rem;
+		@media (min-width: $md4) {
+			max-width: 18.8rem;
+			margin-top: 0.125rem;
+		}
 	}
 }
 
 .values {
-	padding: 5.94rem 0 10.5rem;
+	padding: 2.5rem 0;
+	@media (min-width: $md2) {
+		padding: 5.94rem 0 10.5rem;
+	}
 	// .values__title
 	&__title {
 		max-width: 50rem;
 		margin: 0 auto;
 		text-align: center;
-		font-size: 2.25rem;
-		line-height: 1.3;
+		@media (max-width: $md5) {
+			font-size: rem(22);
+		}
+		@media (min-width: $md3) {
+			line-height: 1.3;
+			font-size: 2.25rem;
+		}
 	}
-	// .values__grid
-	&__grid {
-		margin-top: 3.875rem;
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 2.31rem;
+	// .values__slider
+	&__slider {
+		margin-top: 1.65rem;
+		overflow: visible;
+		@media (min-width: $md4) {
+			margin-top: 3.875rem;
+		}
+	}
+	&__pagination {
+		margin-top: rem(40);
+		justify-content: center;
 	}
 }
 
 .value-card {
 	position: relative;
+	&.swiper-slide {
+		width: rem(284);
+		@media (min-width: $md2) {
+			width: auto;
+		}
+	}
 	// .value-card__link
 	&__link {
 		height: 100%;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		overflow: hidden;
@@ -331,6 +493,7 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 		-webkit-backdrop-filter: blur(rem(2));
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		padding: 0.37rem 0.75rem;
 	}
 	// .value-card__icon
@@ -342,20 +505,23 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 }
 
 .about {
-	padding: 6.06rem 0 6.81rem;
-	position: relative;
-	background: #e7ecf1;
-	z-index: 1;
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		width: 67%;
-		height: 100%;
-		background: linear-gradient(270deg, rgba(231, 236, 241, 0) 63.7%, rgba(231, 236, 241, 0.8) 84.77%, #e7ecf1 99.88%), url("@img/about.png") 0 0 / cover no-repeat;
-		z-index: -1;
+	padding: rem(30) 0;
+	@media (min-width: $md5) {
+		padding: 6.06rem 0 6.81rem;
+		position: relative;
+		background: #e7ecf1;
+		z-index: 1;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			width: 67%;
+			height: 100%;
+			background: linear-gradient(270deg, rgba(231, 236, 241, 0) 63.7%, rgba(231, 236, 241, 0.8) 84.77%, #e7ecf1 99.88%), url("@img/about.png") 0 0 / cover no-repeat;
+			z-index: -1;
+		}
 	}
 	// .about__container
 	&__container {
@@ -366,7 +532,9 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 	}
 	// .about__title
 	&__title {
-		font-size: 2.625rem;
+		@media (min-width: $md4) {
+			font-size: 2.625rem;
+		}
 	}
 	// .about__text
 	&__text {
@@ -385,17 +553,29 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 }
 
 .news {
-	padding: 6.25rem 0 7.5rem;
+	padding: rem(46) 0 rem(70);
+	@media (min-width: $md4) {
+		padding: 6.25rem 0 7.5rem;
+	}
 	// .news__title
 	&__title {
-		font-size: 2.625rem;
+		text-align: center;
+		@media (min-width: $md4) {
+			text-align: left;
+			font-size: 2.625rem;
+		}
 	}
-	// .news__grid
-	&__grid {
-		margin-top: 2.5rem;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 2.31rem;
+	// .news__slider
+	&__slider {
+		overflow: visible;
+		margin-top: 1.25rem;
+		@media (min-width: $md4) {
+			margin-top: 2.5rem;
+		}
+	}
+	&__pagination {
+		margin-top: rem(40);
+		justify-content: center;
 	}
 	// .news__card
 	&__card {
@@ -403,6 +583,14 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 		background: #fff;
 		display: flex;
 		flex-direction: column;
+		height: auto;
+		overflow: hidden;
+		&.swiper-slide {
+			width: rem(342);
+			@media (min-width: $md2) {
+				width: auto;
+			}
+		}
 	}
 	// .news__card-date
 	&__card-date {
@@ -411,7 +599,10 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 		font-family: $font-inter;
 		font-size: 1rem;
 		line-height: 160%;
-		padding: 0.75rem 1.81rem;
+		padding: 0.75rem 1.5rem;
+		@media (min-width: $md4) {
+			padding: 0.75rem 1.81rem;
+		}
 	}
 	// .news__card-title
 	&__card-title {
@@ -420,11 +611,14 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 	// .news__card-link
 	&__card-link {
 		height: 100%;
-		padding: 1.44rem 1.81rem 2rem;
 		display: block;
 		transition: color 0.3s ease;
 		font-family: $font-inter;
 		line-height: 1.5;
+		padding: 1.44rem 1.5rem 2rem;
+		@media (min-width: $md4) {
+			padding: 1.44rem 1.81rem 2rem;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				color: $accent;
@@ -434,7 +628,8 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 	// .news__more
 	&__more {
 		margin-top: 2.87rem;
-		display: inline-flex;
+		width: fit-content;
+		display: flex;
 		align-items: center;
 		gap: 0.44rem;
 		color: #00b4dd;
@@ -444,6 +639,11 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 		letter-spacing: 0.04rem;
 		text-transform: uppercase;
 		transition: color 0.3s ease;
+		margin-right: auto;
+		margin-left: auto;
+		@media (min-width: $md4) {
+			margin-left: 0;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				color: darken($color: $accent, $amount: 10);
