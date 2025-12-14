@@ -1,0 +1,38 @@
+[
+    {
+        "className": "",
+        "image": "@img/doctors/zavialov-andrei-sergeevich.jpg",
+        "name": "Завьялов Андрей Сергеевич",
+        "specialty": "врач стоматолог-ортопед, глав. врач"
+    },
+    {
+        "className": " has-info",
+        "image": "@img/doctors/akhmadullin-ruslan-rifgatovich.jpg",
+        "name": "Ахмадуллин Руслан Рифгатович",
+        "specialty": "врач стоматолог-хирург, имплантолог"
+    },
+    {
+        "className": "",
+        "image": "@img/doctors/galstian-larisa-vaganovna.jpg",
+        "name": "Галстян Лариса Вагановна",
+        "specialty": "детский стоматолог, врач стоматолог-терапевт"
+    },
+    {
+        "className": "",
+        "image": "@img/doctors/gogoleva-elena-leonidovna.jpg",
+        "name": "Гоголева Елена Леонидовна",
+        "specialty": "врач стоматолог-терапевт, врач стоматолог-хирург"
+    },
+    {
+        "className": "",
+        "image": "@img/doctors/emtsova-evgeniia-olegovna.jpg",
+        "name": "Емцова Евгения Олеговна",
+        "specialty": "врач стоматолог-ортодонт"
+    },
+    {
+        "className": "",
+        "image": "@img/doctors/kolkova-nataliia-viktorovna.jpg",
+        "name": "Колкова Наталия Викторовна",
+        "specialty": "врач стоматолог-ортопед"
+    }
+]

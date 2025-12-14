@@ -81,6 +81,65 @@ body {
 // @import "./modules/popup";
 // =============== MODULES ====================
 
+.doctor-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	transition: color 0.3s ease;
+	&.has-info {
+		.doctor-card__image {
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 2rem;
+				height: 2rem;
+				background: url("@img/icon-info.svg") center / contain no-repeat;
+			}
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: #00b4dd;
+		}
+	}
+	// .doctor-card__image
+	&__image {
+		aspect-ratio: 1;
+		width: 100%;
+		max-width: rem(230);
+		background: #fff;
+		border-radius: 50%;
+		overflow: hidden;
+		display: block;
+		box-shadow: 0 0 rem(5) rem(14) rgba(48, 99, 111, 0.025);
+		@media (min-width: $md3) {
+			box-shadow: 0 0 rem(20) rem(34) rgba(48, 99, 111, 0.05);
+		}
+	}
+	// .doctor-card__name
+	&__name {
+		margin-top: 2.25rem;
+		font-size: 1.125rem;
+		font-weight: 700;
+		line-height: 160%;
+	}
+	// .doctor-card__specialty
+	&__specialty {
+		font-family: $font-inter;
+		font-size: 1rem;
+		line-height: 150%;
+		margin-top: 0.725rem;
+		@media (min-width: $md4) {
+			max-width: 18.8rem;
+			margin-top: 0.125rem;
+		}
+	}
+}
+
 .article-block {
 	font-family: $font-inter;
 	& > img {
@@ -156,7 +215,7 @@ body {
 			}
 		}
 		&:has(cite) {
-			border-left: 0.125rem solid #ff7dbc;
+			border-left: 0.125rem solid $accent;
 			padding-block: 0.5rem;
 			display: flex;
 			flex-direction: column;
@@ -182,7 +241,7 @@ body {
 	& cite,
 	& blockquote {
 		padding-block: 0.5rem;
-		border-left: 0.125rem solid #ff7dbc;
+		border-left: 0.125rem solid $accent;
 		color: #181d27;
 		font-style: italic;
 		font-weight: 500;
@@ -214,11 +273,23 @@ body {
 		}
 	}
 	& ul:not([class]) {
-		list-style: disc;
-		padding-left: 1em;
+		&:not(:first-child) {
+			margin-top: 2rem;
+		}
 		& li {
-			&::marker {
-				font-size: 0.35em;
+			position: relative;
+			padding-left: 2em;
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: rem(20);
+				height: rem(16);
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='16' viewBox='0 0 20 16' fill='none'%3E%3Cpath d='M0.707031 8.43066L5.98926 13.7129L19.2066 0.712891' stroke='%2300B4DD' stroke-width='2'/%3E%3C/svg%3E");
 			}
 		}
 	}

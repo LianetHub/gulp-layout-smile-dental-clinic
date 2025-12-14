@@ -300,6 +300,7 @@
 			padding: 0 rem(67);
 		}
 	}
+
 	// .doctors__slider
 	&__slider {
 	}
@@ -331,41 +332,6 @@
 			@media (min-width: $md3) {
 				display: none !important;
 			}
-		}
-	}
-}
-
-.doctor-card {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	// .doctor-card__image
-	&__image {
-		aspect-ratio: 1;
-		width: 100%;
-		max-width: rem(230);
-		background: #fff;
-		border-radius: 50%;
-		overflow: hidden;
-		display: block;
-	}
-	// .doctor-card__name
-	&__name {
-		margin-top: 2.25rem;
-		font-size: 1.125rem;
-		font-weight: 700;
-		line-height: 160%;
-	}
-	// .doctor-card__specialty
-	&__specialty {
-		font-family: $font-inter;
-		font-size: 1rem;
-		line-height: 150%;
-		margin-top: 0.725rem;
-		@media (min-width: $md4) {
-			max-width: 18.8rem;
-			margin-top: 0.125rem;
 		}
 	}
 }

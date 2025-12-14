@@ -1,60 +1,72 @@
 [
     {
+        "className": " swiper-slide",
         "image": "@img/doctors/zavialov-andrei-sergeevich.jpg",
         "name": "Завьялов Андрей Сергеевич",
         "specialty": "врач стоматолог-ортопед, глав. врач"
     },
     {
+        "className": " swiper-slide",
         "image": "@img/doctors/akhmadullin-ruslan-rifgatovich.jpg",
         "name": "Ахмадуллин Руслан Рифгатович",
         "specialty": "врач стоматолог-хирург, имплантолог"
     },
     {
+        "className": " swiper-slide",
         "image": "@img/doctors/galstian-larisa-vaganovna.jpg",
         "name": "Галстян Лариса Вагановна",
         "specialty": "детский стоматолог, врач стоматолог-терапевт"
     },
     {
+        "className": " swiper-slide",
         "image": "@img/doctors/gogoleva-elena-leonidovna.jpg",
         "name": "Гоголева Елена Леонидовна",
         "specialty": "врач стоматолог-терапевт, врач стоматолог-хирург"
     },
     {
+        "className": " swiper-slide",
         "image": "@img/doctors/emtsova-evgeniia-olegovna.jpg",
         "name": "Емцова Евгения Олеговна",
         "specialty": "врач стоматолог-ортодонт"
     },
     {
+        "className": " swiper-slide",
         "image": "@img/doctors/kolkova-nataliia-viktorovna.jpg",
         "name": "Колкова Наталия Викторовна",
         "specialty": "врач стоматолог-ортопед"
     },
     {
+        "className": " swiper-slide",
         "image": "@img/doctors/savchuk-viktoriia-valerievna.jpg",
         "name": "Савчук Виктория Валерьевна",
         "specialty": "врач стоматолог-ортопед"
     },
     {
+        "className": " swiper-slide",
         "image": "@img/doctors/tarasova-zhanna-andreevna.jpg",
         "name": "Тарасова Жанна Андреевна",
         "specialty": "врач стоматолог-терапевт"
     },
     {
+        "className": " swiper-slide",
         "image": "@img/doctors/tereshonok-olga-vitalievna.jpg",
         "name": "Терешонок Ольга Витальевна",
         "specialty": "детский стоматолог, врач стоматолог-терапевт"
     },
     {
+        "className": " swiper-slide",
         "image": "@img/doctors/tikhomirova-arina-igorevna.jpg",
         "name": "Тихомирова Арина Игоревна",
         "specialty": "гигиенист стоматологический"
     },
     {
+        "className": " swiper-slide",
         "image": "@img/doctors/konovalova-valeriia-valerievna.jpg",
         "name": "Коновалова Валерия Валерьевна",
         "specialty": "врач-стоматолог"
     },
     {
+        "className": " swiper-slide",
         "image": "@img/doctors/malkin-anatolii-igorevich.jpg",
         "name": "Малкин Анатолий Игоревич",
         "specialty": "врач стоматолог-ортопед"
