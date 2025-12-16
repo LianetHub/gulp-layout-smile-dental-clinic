@@ -1,7 +1,6 @@
 .popup {
 	background: #fff;
-	max-width: rem(620);
-	width: 100%;
+	width: calc(100vw - 1rem);
 	color: #242424;
 	padding: 1.5rem 2rem;
 	border-radius: 1.5rem;
@@ -10,6 +9,11 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 999;
+	max-width: 100%;
+	@media (min-width: 636px) {
+		max-width: rem(620);
+		width: 100%;
+	}
 	&.active {
 		display: block;
 	}

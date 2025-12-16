@@ -178,6 +178,50 @@ document.addEventListener("DOMContentLoaded", function () {
     initPhoneMask();
 });
 
+
+const servicesNavLinks = document.querySelectorAll('.services__nav-link');
+const serviceImages = document.querySelectorAll('.services__image');
+
+if (servicesNavLinks.length > 0 && serviceImages.length > 0) {
+    servicesNavLinks.forEach((link, index) => {
+
+        const activateImage = (linkIndex) => {
+
+            servicesNavLinks.forEach(navLink => navLink.classList.remove('active'));
+            serviceImages.forEach(image => image.classList.remove('active'));
+
+            link.classList.add('active');
+            if (serviceImages[linkIndex]) {
+                serviceImages[linkIndex].classList.add('active');
+            }
+        };
+
+
+        link.addEventListener('mouseover', (event) => {
+            activateImage(index);
+        });
+
+
+    });
+
+
+    servicesNavLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+
+            const clickedIndex = Array.from(servicesNavLinks).indexOf(link);
+
+            servicesNavLinks.forEach(navLink => navLink.classList.remove('active'));
+            serviceImages.forEach(image => image.classList.remove('active'));
+
+            link.classList.add('active');
+            if (serviceImages[clickedIndex]) {
+                serviceImages[clickedIndex].classList.add('active');
+            }
+        });
+    });
+}
+
+
 function initSliders() {
     if (document.querySelector('.hero__slider')) {
         new Swiper('.hero__slider', {

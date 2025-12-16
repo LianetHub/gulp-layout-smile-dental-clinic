@@ -65,6 +65,9 @@
 }
 
 .swiper-pagination {
+	&.swiper-pagination-lock {
+		display: none !important;
+	}
 	&.swiper-pagination-bullets {
 		position: static;
 		bottom: auto;
@@ -126,23 +129,23 @@
 
 // Стилизация скролла
 
-$scrollbarColor: #00b4dd;
+// $scrollbarColor: #00b4dd;
 
-::-webkit-scrollbar {
-	width: rem(8);
-}
-::-webkit-scrollbar-track {
-	background: #fff;
-}
-::-webkit-scrollbar-thumb {
-	background: $scrollbarColor;
-	border-radius: rem(8);
-	@media (any-hover: hover) {
-		&:hover {
-			background: darken($color: $scrollbarColor, $amount: 10);
-		}
-	}
-}
+// ::-webkit-scrollbar {
+// 	width: rem(8);
+// }
+// ::-webkit-scrollbar-track {
+// 	background: #fff;
+// }
+// ::-webkit-scrollbar-thumb {
+// 	background: $scrollbarColor;
+// 	border-radius: rem(8);
+// 	@media (any-hover: hover) {
+// 		&:hover {
+// 			background: darken($color: $scrollbarColor, $amount: 10);
+// 		}
+// 	}
+// }
 
 //============ ОБЩИЕ ЭЛЕМЕНТЫ ============
 

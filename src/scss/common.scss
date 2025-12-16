@@ -116,6 +116,11 @@ body {
 			}
 		}
 	}
+	&.swiper-slide {
+		.doctor-card__image {
+			box-shadow: none;
+		}
+	}
 	@media (any-hover: hover) {
 		&:hover {
 			color: #00b4dd;
