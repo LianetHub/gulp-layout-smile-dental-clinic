@@ -221,6 +221,23 @@ if (servicesNavLinks.length > 0 && serviceImages.length > 0) {
     });
 }
 
+const contactBlock = document.querySelector('.header__contact');
+const currentLink = document.querySelector('.header__contact-current-link');
+
+if (contactBlock && currentLink) {
+    currentLink.addEventListener('click', function (e) {
+        if (window.matchMedia('(any-hover: none)').matches) {
+            e.preventDefault();
+            contactBlock.classList.toggle('active');
+        }
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!contactBlock.contains(e.target)) {
+            contactBlock.classList.remove('active');
+        }
+    });
+}
 
 function initSliders() {
     if (document.querySelector('.hero__slider')) {

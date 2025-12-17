@@ -135,9 +135,9 @@ body {
 		border-radius: 50%;
 		overflow: hidden;
 		display: block;
-		box-shadow: 0 0 rem(5) rem(14) rgba(48, 99, 111, 0.025);
+		filter: drop-shadow(0 rem(5) rem(14) rgba(48, 99, 111, 0.05));
 		@media (min-width: $md3) {
-			box-shadow: 0 0 rem(20) rem(34) rgba(48, 99, 111, 0.05);
+			filter: drop-shadow(0 rem(20) rem(34) rgba(48, 99, 111, 0.05));
 		}
 	}
 	// .doctor-card__name
@@ -305,7 +305,7 @@ body {
 			&::before {
 				content: "";
 				position: absolute;
-				top: 0;
+				top: 0.375rem;
 				left: 0;
 				width: rem(20);
 				height: rem(16);

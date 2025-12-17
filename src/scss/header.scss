@@ -46,13 +46,21 @@
 			padding: 0.81rem 1.25rem 1rem;
 			background: #f7f6fa;
 			color: #334b59;
-
 			margin-left: -1rem;
 			margin-right: -1rem;
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
+				.header__contact-more {
+					opacity: 1;
+					visibility: visible;
+					transform: none;
+				}
+			}
+		}
+		@media (any-hover: none) {
+			&.active {
 				.header__contact-more {
 					opacity: 1;
 					visibility: visible;
@@ -79,13 +87,15 @@
 		top: 100%;
 		left: 0;
 		min-width: 100%;
-		padding-top: 2rem;
 		width: fit-content;
 		z-index: 2;
 		opacity: 0;
 		visibility: hidden;
 		transform: translate3d(0, -0.5rem, 1px);
 		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		@media (min-width: $md4) {
+			padding-top: 2rem;
+		}
 	}
 	// .header__contact-list
 	&__contact-list {
@@ -100,7 +110,6 @@
 	}
 	// .header__contact-link
 	&__contact-link {
-		font-size: 1.125rem;
 		font-weight: 500;
 		line-height: 160%;
 		padding: 0.94rem 1.56rem 0.94rem 1.2rem;
@@ -109,6 +118,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		font-size: 1.125rem;
+		@media (max-width: 400px) {
+			font-size: 0.875rem;
+		}
 		&.current {
 			color: #00b4dd;
 			&::after {

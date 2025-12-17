@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2 supports variations"), url("../fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2-variations"), url("../fonts/Inter-VariableFont_opsz,wght.woff") format("woff");
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Manrope-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -8,8 +8,8 @@
 }
 
 @font-face {
-  font-family: "Manrope";
-  src: url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Manrope-VariableFont_wght.woff") format("woff");
+  font-family: "Inter";
+  src: url("../fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2 supports variations"), url("../fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2-variations"), url("../fonts/Inter-VariableFont_opsz,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -720,8 +720,8 @@ body.popup-active .wrapper::before {
   border-radius: 50%;
   overflow: hidden;
   display: block;
-  -webkit-box-shadow: 0 0 0.3125rem 0.875rem rgba(48, 99, 111, 0.025);
-          box-shadow: 0 0 0.3125rem 0.875rem rgba(48, 99, 111, 0.025);
+  -webkit-filter: drop-shadow(0 0.3125rem 0.875rem rgba(48, 99, 111, 0.05));
+          filter: drop-shadow(0 0.3125rem 0.875rem rgba(48, 99, 111, 0.05));
 }
 
 .doctor-card__name {
@@ -892,7 +892,7 @@ body.popup-active .wrapper::before {
 .article-block ul:not([class]) li::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 0.375rem;
   left: 0;
   width: 1.25rem;
   height: 1rem;
@@ -943,7 +943,6 @@ body.popup-active .wrapper::before {
   top: 100%;
   left: 0;
   min-width: 100%;
-  padding-top: 2rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -966,7 +965,6 @@ body.popup-active .wrapper::before {
 }
 
 .header__contact-link {
-  font-size: 1.125rem;
   font-weight: 500;
   line-height: 160%;
   padding: 0.94rem 1.56rem 0.94rem 1.2rem;
@@ -982,6 +980,7 @@ body.popup-active .wrapper::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 1.125rem;
 }
 
 .header__contact-link.current {
@@ -1984,6 +1983,8 @@ body.popup-active .wrapper::before {
   border-radius: 0.625rem;
   background: #fff;
   overflow: hidden;
+  -webkit-box-shadow: 0 1.25rem 2.125rem 0 rgba(48, 99, 111, 0.04);
+          box-shadow: 0 1.25rem 2.125rem 0 rgba(48, 99, 111, 0.04);
 }
 
 .locations__office-image {
@@ -2447,6 +2448,10 @@ body.popup-active .wrapper::before {
     gap: 1rem;
   }
 
+  .header__contact-more {
+    padding-top: 2rem;
+  }
+
   .header__actions {
     padding: 0;
   }
@@ -2766,8 +2771,8 @@ body.popup-active .wrapper::before {
   }
 
   .doctor-card__image {
-    -webkit-box-shadow: 0 0 1.25rem 2.125rem rgba(48, 99, 111, 0.05);
-            box-shadow: 0 0 1.25rem 2.125rem rgba(48, 99, 111, 0.05);
+    -webkit-filter: drop-shadow(0 1.25rem 2.125rem rgba(48, 99, 111, 0.05));
+            filter: drop-shadow(0 1.25rem 2.125rem rgba(48, 99, 111, 0.05));
   }
 
   .header__top-container {
@@ -3171,6 +3176,10 @@ body.popup-active .wrapper::before {
   .header__contact {
     font-size: 0.875rem;
   }
+
+  .header__contact-link {
+    font-size: 0.875rem;
+  }
 }
 
 @media (any-hover: hover) {
@@ -3318,5 +3327,15 @@ body.popup-active .wrapper::before {
 
   .prices__table table tbody td a:hover {
     text-decoration: none;
+  }
+}
+
+@media (any-hover: none) {
+  .header__contact.active .header__contact-more {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 }
