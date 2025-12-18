@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Manrope";
-  src: url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Manrope-VariableFont_wght.woff") format("woff");
+  font-family: "Inter";
+  src: url("../fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2 supports variations"), url("../fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2-variations"), url("../fonts/Inter-VariableFont_opsz,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -8,8 +8,8 @@
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2 supports variations"), url("../fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2-variations"), url("../fonts/Inter-VariableFont_opsz,wght.woff") format("woff");
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Manrope-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -940,12 +940,6 @@ body.popup-active .wrapper::before {
 
 .header__contact-more {
   position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 100%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   z-index: 2;
   opacity: 0;
   visibility: hidden;
@@ -953,11 +947,15 @@ body.popup-active .wrapper::before {
           transform: translate3d(0, -0.5rem, 1px);
   -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  left: 1rem;
+  right: 1rem;
+  top: calc(100% - 0.75rem);
 }
 
 .header__contact-list {
   background: #fff;
   color: #334b59;
+  width: 100%;
   border-radius: 0.625rem;
   -webkit-box-shadow: 0 1.25rem 2.125rem 0 rgba(48, 99, 111, 0.14);
           box-shadow: 0 1.25rem 2.125rem 0 rgba(48, 99, 111, 0.14);
@@ -2449,7 +2447,14 @@ body.popup-active .wrapper::before {
   }
 
   .header__contact-more {
-    padding-top: 2rem;
+    top: 100%;
+    left: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    right: auto;
+    min-width: 100%;
+    padding-top: 1.5rem;
   }
 
   .header__actions {
