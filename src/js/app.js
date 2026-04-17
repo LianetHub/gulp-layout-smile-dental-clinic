@@ -337,10 +337,14 @@ function initSliders() {
     }
 
     if (document.querySelector('.certs__slider')) {
-        new Swiper('.certs__slider', {
+        new Swiper('.certs__slider .swiper', {
             spaceBetween: 20,
             slidesPerView: "auto",
             watchOverflow: true,
+            navigation: {
+                prevEl: '.certs__slider-prev',
+                nextEl: '.certs__slider-next'
+            },
             breakpoints: {
                 1199.98: {
                     slidesPerView: 3,
@@ -349,11 +353,15 @@ function initSliders() {
             }
         });
     }
-    if (document.querySelector('.media__slider')) {
-        new Swiper('.media__slider', {
+    if (document.querySelector('.media__slider .swiper')) {
+        new Swiper('.media__slider .swiper', {
             spaceBetween: 20,
             slidesPerView: "auto",
             watchOverflow: true,
+            navigation: {
+                prevEl: '.media__slider-prev',
+                nextEl: '.media__slider-next'
+            },
             breakpoints: {
                 1199.98: {
                     slidesPerView: 2,

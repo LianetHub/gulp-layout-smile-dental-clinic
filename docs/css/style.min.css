@@ -2900,6 +2900,15 @@ body.popup-active .wrapper::before {
 }
 .certs__slider {
   margin-top: 2rem;
+  position: relative;
+}
+.certs__slider-prev.swiper-button-prev {
+  --swiper-navigation-top-offset: calc(50% - 1.5rem);
+  left: -80px;
+}
+.certs__slider-next.swiper-button-next {
+  --swiper-navigation-top-offset: calc(50% - 1.5rem);
+  right: -80px;
 }
 .certs__slide {
   display: flex;
@@ -2940,6 +2949,15 @@ body.popup-active .wrapper::before {
 }
 .media__slider {
   margin-top: 2.75rem;
+  position: relative;
+}
+.media__slider-prev.swiper-button-prev {
+  --swiper-navigation-top-offset: calc(50% - 1.5rem);
+  left: -80px;
+}
+.media__slider-next.swiper-button-next {
+  --swiper-navigation-top-offset: calc(50% - 1.5rem);
+  right: -80px;
 }
 .media__card {
   display: flex;
