@@ -293,8 +293,11 @@
 	// .reviews__list
 	&__list {
 		margin-top: 2rem;
-		columns: 2;
-		column-gap: rem(40);
+
+		@media (min-width:$md5) {
+			columns: 2;
+			column-gap: rem(40);
+		}
 	}
 
 	&__btn {}

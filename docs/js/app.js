@@ -341,14 +341,28 @@ function initSliders() {
             spaceBetween: 20,
             slidesPerView: "auto",
             watchOverflow: true,
+            autoHeight: true,
             navigation: {
                 prevEl: '.certs__slider-prev',
                 nextEl: '.certs__slider-next'
             },
+            pagination: {
+                el: '.certs__pagination',
+                clickable: true,
+            },
             breakpoints: {
+                575.98: {
+                    autoHeight: false
+                },
+                767.98: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                    autoHeight: false
+                },
                 1199.98: {
                     slidesPerView: 3,
                     spaceBetween: 24,
+                    autoHeight: false
                 }
             }
         });
@@ -362,8 +376,12 @@ function initSliders() {
                 prevEl: '.media__slider-prev',
                 nextEl: '.media__slider-next'
             },
+            pagination: {
+                el: '.media__pagination',
+                clickable: true,
+            },
             breakpoints: {
-                1199.98: {
+                767.98: {
                     slidesPerView: 2,
                     spaceBetween: 24,
                 }

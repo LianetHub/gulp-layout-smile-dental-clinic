@@ -1,5 +1,6 @@
 :root {
 	--swiper-pagination-bottom: #{rem(12)};
+
 	@media (min-width: $md4) {
 		--swiper-pagination-bottom: #{rem(42)};
 	}
@@ -7,9 +8,11 @@
 
 * {
 	scroll-margin-top: 4rem;
+
 	@media (min-width: $md3) {
 		scroll-margin-top: 5rem;
 	}
+
 	@media (min-width: $md2) {
 		scroll-margin-top: 7rem;
 	}
@@ -24,6 +27,7 @@ body {
 	margin-right: 0 !important;
 	color: $text;
 	background: #f7f6fa;
+
 	&.open-mobile-menu {
 		.wrapper {
 			&::before {
@@ -38,8 +42,10 @@ body {
 			}
 		}
 	}
+
 	&.popup-active {
 		overflow: hidden;
+
 		.wrapper {
 			&::before {
 				content: "";
@@ -65,6 +71,7 @@ body {
 	flex-direction: column;
 	margin: 0 auto;
 	overflow-x: clip;
+
 	@media (max-width: $md3) {
 		overflow-x: hidden;
 	}
@@ -92,8 +99,8 @@ body {
 // @import "./modules/preloader";
 @import "./modules/breads";
 @import "./modules/popup";
+@import "./modules/pagination";
 // @import "./modules/animation";
-// @import "./modules/pagination";
 // =============== MODULES ====================
 
 .doctor-card {
@@ -102,9 +109,11 @@ body {
 	align-items: center;
 	text-align: center;
 	transition: color 0.3s ease;
+
 	&.has-info {
 		.doctor-card__image {
 			position: relative;
+
 			&::before {
 				content: "";
 				position: absolute;
@@ -116,16 +125,19 @@ body {
 			}
 		}
 	}
+
 	&.swiper-slide {
 		.doctor-card__image {
 			box-shadow: none;
 		}
 	}
+
 	@media (any-hover: hover) {
 		&:hover {
 			color: #00b4dd;
 		}
 	}
+
 	// .doctor-card__image
 	&__image {
 		aspect-ratio: 1;
@@ -136,10 +148,12 @@ body {
 		overflow: hidden;
 		display: block;
 		filter: drop-shadow(0 rem(5) rem(14) rgba(48, 99, 111, 0.05));
+
 		@media (min-width: $md3) {
 			filter: drop-shadow(0 rem(20) rem(34) rgba(48, 99, 111, 0.05));
 		}
 	}
+
 	// .doctor-card__name
 	&__name {
 		margin-top: 2.25rem;
@@ -147,12 +161,14 @@ body {
 		font-weight: 700;
 		line-height: 160%;
 	}
+
 	// .doctor-card__specialty
 	&__specialty {
 		font-family: $font-inter;
 		font-size: 1rem;
 		line-height: 150%;
 		margin-top: 0.725rem;
+
 		@media (min-width: $md4) {
 			max-width: 18.8rem;
 			margin-top: 0.125rem;
@@ -162,41 +178,51 @@ body {
 
 .article-block {
 	font-family: $font-inter;
-	& > img {
+
+	&>img {
 		width: 100%;
 		border-radius: rem(12);
 	}
+
 	& h2 {
 		font-weight: 600;
 		line-height: 126.667%;
 		color: #181d27;
 		font-size: rem(20);
+
 		@media (min-width: $md4) {
 			font-size: 1.875rem;
 		}
+
 		&:not(:first-child) {
 			margin-top: 2rem;
 		}
+
 		&:not(:last-child) {
 			margin-bottom: 1.25rem;
 		}
 	}
+
 	& h3 {
 		color: #181d27;
 		font-weight: 600;
 		font-size: 1.25rem;
 		line-height: 160%;
+
 		@media (min-width: $md4) {
 			line-height: 133.333%;
 			font-size: 1.5rem;
 		}
+
 		&:not(:first-child) {
 			margin-top: 2rem;
 		}
+
 		&:not(:last-child) {
 			margin-bottom: 1.25rem;
 		}
 	}
+
 	& p,
 	& ul:not([class]) {
 		font-size: 1rem;
@@ -211,22 +237,27 @@ body {
 		&:not(:first-child) {
 			margin-top: 3rem;
 		}
+
 		&:not(:last-child) {
 			margin-bottom: 3rem;
 		}
-		& > img {
+
+		&>img {
 			min-height: 14.375rem;
 			object-fit: cover;
 			width: 100%;
 			border-radius: rem(12);
 		}
+
 		figcaption {
 			margin-top: 1rem;
 			font-size: 0.875rem;
 			line-height: 142.857%;
+
 			& a {
 				text-decoration: underline;
 				color: inherit;
+
 				@media (any-hover: hover) {
 					&:hover {
 						text-decoration: none;
@@ -234,6 +265,7 @@ body {
 				}
 			}
 		}
+
 		&:has(cite) {
 			border-left: 0.125rem solid $accent;
 			padding-block: 0.5rem;
@@ -241,23 +273,28 @@ body {
 			flex-direction: column;
 			align-items: flex-start;
 			padding-left: 1.25rem;
+
 			@media (min-width: $md4) {
 				padding-left: 1.5rem;
 			}
+
 			& cite {
 				padding-left: 0;
 				border-left: 0;
 				padding-block: 0;
 			}
+
 			.article__author {
 				margin-top: 2rem;
 			}
+
 			.article__author-thumb {
 				width: 3rem;
 				height: 3rem;
 			}
 		}
 	}
+
 	& cite,
 	& blockquote {
 		padding-block: 0.5rem;
@@ -269,39 +306,49 @@ body {
 		display: block;
 		font-size: 1.25rem;
 		padding-left: 1.25rem;
+
 		@media (min-width: $md4) {
 			padding-left: 1.5rem;
 			font-size: 1.5rem;
 		}
 	}
+
 	& iframe {
 		width: 100%;
 		aspect-ratio: math.div(328, 187);
+
 		&:not(:first-child) {
 			margin-top: 3rem;
 		}
+
 		&:not(:last-child) {
 			margin-bottom: 3rem;
 		}
 	}
+
 	& a {
 		text-decoration: underline;
+
 		@media (any-hover: hover) {
 			&:hover {
 				text-decoration: none;
 			}
 		}
 	}
+
 	& ul:not([class]) {
 		&:not(:first-child) {
 			margin-top: 2rem;
 		}
+
 		& li {
 			position: relative;
 			padding-left: 2em;
+
 			&:not(:last-child) {
 				margin-bottom: 1rem;
 			}
+
 			&::before {
 				content: "";
 				position: absolute;
