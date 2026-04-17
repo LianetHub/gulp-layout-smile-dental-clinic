@@ -335,6 +335,33 @@ function initSliders() {
             }
         });
     }
+
+    if (document.querySelector('.certs__slider')) {
+        new Swiper('.certs__slider', {
+            spaceBetween: 20,
+            slidesPerView: "auto",
+            watchOverflow: true,
+            breakpoints: {
+                1199.98: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                }
+            }
+        });
+    }
+    if (document.querySelector('.media__slider')) {
+        new Swiper('.media__slider', {
+            spaceBetween: 20,
+            slidesPerView: "auto",
+            watchOverflow: true,
+            breakpoints: {
+                1199.98: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                }
+            }
+        });
+    }
 }
 
 function initPhoneMask() {

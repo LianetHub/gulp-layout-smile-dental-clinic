@@ -4,15 +4,16 @@
 	align-items: flex-start;
 	gap: rem(47);
 	flex-direction: column-reverse;
+
 	@media (min-width: $md3) {
 		flex-direction: row;
 	}
+
 	// .service__sidebar
-	&__sidebar {
-	}
+	&__sidebar {}
+
 	// .service__content
-	&__content {
-	}
+	&__content {}
 }
 
 .sidebar {
@@ -21,11 +22,14 @@
 	overflow: hidden;
 	box-shadow: 0 rem(20) rem(34) 0 rgba(48, 99, 111, 0.04);
 	width: 100%;
+
 	@media (min-width: $md3) {
 		position: sticky;
 		top: 1rem;
 		flex: 0 0 rem(284);
+		z-index: 2;
 	}
+
 	// .sidebar__title
 	&__title {
 		font-size: 1.5625rem;
@@ -34,16 +38,18 @@
 		padding: 1.19rem 1.38rem;
 		background: #e7ecf1;
 	}
+
 	// .sidebar__nav
 	&__nav {
 		padding: rem(6);
 	}
+
 	// .sidebar__nav-list
-	&__nav-list {
-	}
+	&__nav-list {}
+
 	// .sidebar__nav-item
-	&__nav-item {
-	}
+	&__nav-item {}
+
 	// .sidebar__nav-link
 	&__nav-link {
 		line-height: 133.333%;
@@ -55,12 +61,15 @@
 		padding: em(0.7, 1.125) em(1.12, 1.25);
 		min-height: em(47, 18);
 		transition: background-color 0.3s ease, color 0.3s ease;
+
 		@media (min-width: $md3) {
 			font-size: 1.125rem;
 		}
+
 		&.active {
 			background: #f0f1f6;
 		}
+
 		@media (any-hover: hover) {
 			&:hover {
 				background: #f0f1f6;
@@ -70,15 +79,20 @@
 }
 
 .content {
+	min-width: 0;
+	max-width: 100%;
+
 	// .content__title
 	&__title {
 		&:not(:first-child) {
 			margin-top: 1rem;
 		}
+
 		@media (min-width: $md3) {
 			font-size: 2.75rem;
 		}
 	}
+
 	&__article {
 		padding: 2rem 0;
 	}
@@ -86,10 +100,12 @@
 
 .specialists {
 	padding: 2.13rem 0;
+
 	// .specialists__title
 	&__title {
 		font-size: 1.5625rem;
 	}
+
 	// .specialists__grid
 	&__grid {
 		margin-top: rem(43);
@@ -97,18 +113,22 @@
 		row-gap: rem(40);
 		grid-template-columns: repeat(2, 1fr);
 		column-gap: rem(25);
+
 		@media (min-width: $md4) {
 			column-gap: rem(56);
 			grid-template-columns: repeat(3, 1fr);
 		}
+
 		.doctor-card {
 			&__image {
 				max-width: 12.5rem;
 			}
+
 			&__name {
 				margin-top: 1.69rem;
 				font-size: 1rem;
 			}
+
 			&__specialty {
 				font-size: 0.875rem;
 			}
@@ -118,80 +138,99 @@
 
 .prices {
 	padding: 2.13rem 0;
+
 	// .prices__title
 	&__title {
 		margin-bottom: 2.31rem;
 	}
+
 	// .prices__table
 	&__table {
 		box-shadow: 0 rem(20) rem(34) rgba(48, 99, 111, 0.04);
+
 		&:not(:last-child) {
 			margin-bottom: 2.5rem;
 		}
+
 		table {
 			width: 100%;
 			font-family: $font-inter;
 			line-height: 160%;
 			font-size: 0.875rem;
+
 			@media (min-width: $md4) {
 				font-size: 1rem;
 			}
+
 			thead {
 				background: #00b4dd;
 				color: #fff;
 				font-family: $font-inter;
 				text-align: left;
+
 				& th {
 					padding: 0.75rem 1.38rem;
 					font-weight: 400;
+
 					& small {
 						margin-top: 0.25rem;
 						display: block;
 						font-size: 0.5rem;
 						line-height: 1.2;
+
 						@media (min-width: $md5) {
 							font-size: 0.875rem;
 						}
 					}
+
 					&:first-child {
 						border-radius: rem(10) 0 0 0;
 					}
+
 					&:last-child {
 						border-radius: 0 rem(10) 0 0;
 						width: 11rem;
 					}
 				}
 			}
+
 			tbody {
 				& tr {
 					&:not(:last-child) {
 						border-bottom: rem(1.5) solid #e7ecf1;
 					}
+
 					background: #fff;
 					color: #334b59;
+
 					&:last-child {
 						td {
 							&:first-child {
 								border-radius: 0 0 0 rem(10);
 							}
+
 							&:last-child {
 								border-radius: 0 0 rem(10) 0;
 							}
 						}
 					}
 				}
+
 				& td {
 					padding: 0.81rem 1.38rem;
+
 					& a {
 						text-decoration: underline;
+
 						@media (any-hover: hover) {
 							&:hover {
 								text-decoration: none;
 							}
 						}
 					}
-					&:first-child {
-					}
+
+					&:first-child {}
+
 					&:last-child {
 						width: 11rem;
 					}
@@ -209,11 +248,13 @@
 	display: flex;
 	flex-direction: column-reverse;
 	gap: 1rem;
+
 	@media (min-width: $md5) {
 		align-items: flex-end;
 		justify-content: space-between;
 		flex-direction: row;
 	}
+
 	// .consult__image
 	&__image {
 		@media (min-width: $md4) {
@@ -222,6 +263,7 @@
 			flex-shrink: 0;
 		}
 	}
+
 	// .consult__body
 	&__body {
 		display: flex;
@@ -229,24 +271,29 @@
 		align-items: flex-start;
 		padding: 2rem 2rem 0;
 		gap: 1.5rem;
+
 		@media (min-width: $md4) {
 			gap: 0.25rem;
 			padding: 3.75rem 4.38rem 3.75rem 0;
 		}
+
 		@media (min-width: $md2) {
 			align-items: center;
 			flex-direction: row;
 		}
 	}
+
 	// .consult__text
 	&__text {
 		font-style: normal;
 		font-weight: 400;
 		line-height: 160%;
+
 		@media (min-width: $md4) {
 			font-size: 1.25rem;
 		}
 	}
+
 	// .consult__btn
 	&__btn {
 		flex-shrink: 0;

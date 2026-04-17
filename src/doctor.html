@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Страница услуги'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page">
+                <div class="container">
+                    <div class="service">
+                        <aside class="service__sidebar sidebar">
+                            <h3 class="sidebar__title">Клиника</h3>
+                            <nav aria-label="Боковое меню" class="sidebar__nav">
+                                <ul class="sidebar__nav-list">
+                                    <li class="sidebar__nav-item">
+                                        <a href="#" class="sidebar__nav-link">Лечение</a>
+                                    </li>
+                                    <li class="sidebar__nav-item">
+                                        <a href="#" class="sidebar__nav-link">Протезирование</a>
+                                    </li>
+                                    <li class="sidebar__nav-item">
+                                        <a href="#" class="sidebar__nav-link">Имплантация</a>
+                                    </li>
+                                    <li class="sidebar__nav-item">
+                                        <a href="#" class="sidebar__nav-link">Хирургия и удаление</a>
+                                    </li>
+                                    <li class="sidebar__nav-item">
+                                        <a href="#" class="sidebar__nav-link">Ортодонтия</a>
+                                    </li>
+                                    <li class="sidebar__nav-item">
+                                        <a href="#" class="sidebar__nav-link">Детская стоматология</a>
+                                    </li>
+                                    <li class="sidebar__nav-item">
+                                        <a href="#" class="sidebar__nav-link">Отбеливание и чистка</a>
+                                    </li>
+                                    <li class="sidebar__nav-item">
+                                        <a href="#" class="sidebar__nav-link">Лазерная стоматология</a>
+                                    </li>
+                                    <li class="sidebar__nav-item">
+                                        <a href="#" class="sidebar__nav-link">Рентгенодиагностика</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+                        <div class="service__content content">
+                            <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                                <ul class="breadcrumbs__list">
+                                    <li class="breadcrumbs__item">
+                                        <a href="/" class="breadcrumbs__link">Главная</a>
+                                    </li>
+                                    <li class="breadcrumbs__item">
+                                        <a href="" class="breadcrumbs__link">Услуги</a>
+                                    </li>
+                                    <li class="breadcrumbs__item">
+                                        <span class="breadcrumbs__link active">Лечение зубов</span>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <section class="doctor">
+                                <div class="doctor__image">
+                                    <img src="@img/doctors/zavialov-andrei-sergeevich.jpg" class="cover-image" alt="Фото доктора">
+                                </div>
+                                <div class="doctor__content">
+                                    <h1 class="doctor__title">Завьялов Андрей Сергеевич</h1>
+                                    <ul class="doctor__info">
+                                        <li>Врач стоматолог-ортопед, глав. врач</li>
+                                        <li>Опыт работы: 16 лет</li>
+                                        <li>Принимает в клиниках: Ветеранов 130 | Дачный 14k3</li>
+                                    </ul>
+                                    <div class="doctor__details">
+                                        <div class="doctor__details-block">
+                                            <div class="doctor__detail-caption">Образование</div>
+                                            <ul class="doctor__detail-list">
+                                                <li>2013 г. Первый Санкт-Петербургский государственный медицинский университет им. акад. И. П. Павлова</li>
+                                                <li>2014 г. Интернатура по специальности «Стоматология хирургическая» на базе СЗГМУ им. И. И. Мечникова</li>
+                                                <li>2015 г. Переподготовка по специальности «Стоматология ортопедическая» на базе СЗГМУ им. И. И. Мечникова</li>
+                                            </ul>
+                                        </div>
+                                        <div class="doctor__details-block">
+                                            <div class="doctor__detail-caption">Дополнительное образование</div>
+                                            <ul class="doctor__detail-list">
+                                                <li>012 г. Участник Dentium World Symposium в Москве по имплантации и костной пластике. Посетил семинары «Костная пластика и пластика мягкими тканями», «Основы протезирования на имплантатах, вектор» компании Nobel.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="" class="doctor__btn btn btn-lg btn-primary-outline">Онлайн запись</a>
+                                </div>
+                            </section>
+                            <div class="certs">
+                                <h2 class="certs__title title-md">Сертификаты</h2>
+                                <div class="certs__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="certs__slide swiper-slide">
+                                            <div class="certs__image">
+                                                <img src="@img/cert.jpg" class="cover-image" alt="cert">
+                                            </div>
+                                            <div class="certs__image">
+                                                <img src="@img/cert.jpg" class="cover-image" alt="cert">
+                                            </div>
+                                        </div>
+                                        <div class="certs__slide swiper-slide">
+                                            <div class="certs__image">
+                                                <img src="@img/cert.jpg" class="cover-image" alt="cert">
+                                            </div>
+                                        </div>
+                                        <div class="certs__slide swiper-slide">
+                                            <div class="certs__image">
+                                                <img src="@img/cert.jpg" class="cover-image" alt="cert">
+                                            </div>
+                                            <div class="certs__image">
+                                                <img src="@img/cert.jpg" class="cover-image" alt="cert">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <section class="reviews">
+                                <h2 class="reviews__title title-md">Отзывы</h2>
+                                <div class="reviews__content">
+                                    <ul class="reviews__list">
+                                        @@loop('./html/templates/_review-card.html', './html/json/reviews.json')
+                                    </ul>
+                                </div>
+                                <a href="" class="reviews__btn btn btn-lg btn-primary-outline">
+                                    Оставить отзыв
+                                </a>
+                            </section>
+                            <section class="media">
+                                <h2 class="media__title title-md">Фото работ</h2>
+                                <p class="media__subtitle">Это реальные лица наших пациентов, у которых мы запросили разрешение, чтобы показать вам как изменилась их улыбка</p>
+                                <div class="media__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="media__card swiper-slide">
+                                            <div class="media__card-image">
+                                                <div class="media__card-label">До</div>
+                                                <img src="@img/media/before.jpg" class="cover-image" alt="Фото до">
+                                            </div>
+                                            <div class="media__card-image">
+                                                <div class="media__card-label">После</div>
+                                                <img src="@img/media/after.jpg" class="cover-image" alt="Фото после">
+                                            </div>
+                                            <div class="media__card-text">Тотальная реабилитация улыбки</div>
+                                        </div>
+                                        <div class="media__card swiper-slide">
+                                            <div class="media__card-image">
+                                                <div class="media__card-label">До</div>
+                                                <img src="@img/media/before.jpg" class="cover-image" alt="Фото до">
+                                            </div>
+                                            <div class="media__card-image">
+                                                <div class="media__card-label">После</div>
+                                                <img src="@img/media/after.jpg" class="cover-image" alt="Фото после">
+                                            </div>
+                                            <div class="media__card-text">Комплексная работа по имплантации</div>
+                                        </div>
+                                        <div class="media__card swiper-slide">
+                                            <div class="media__card-image">
+                                                <div class="media__card-label">До</div>
+                                                <img src="@img/media/before.jpg" class="cover-image" alt="Фото до">
+                                            </div>
+                                            <div class="media__card-image">
+                                                <div class="media__card-label">После</div>
+                                                <img src="@img/media/after.jpg" class="cover-image" alt="Фото после">
+                                            </div>
+                                            <div class="media__card-text">Тотальная реабилитация улыбки</div>
+                                        </div>
+                                        <div class="media__card swiper-slide">
+                                            <div class="media__card-image">
+                                                <div class="media__card-label">До</div>
+                                                <img src="@img/media/before.jpg" class="cover-image" alt="Фото до">
+                                            </div>
+                                            <div class="media__card-image">
+                                                <div class="media__card-label">После</div>
+                                                <img src="@img/media/after.jpg" class="cover-image" alt="Фото после">
+                                            </div>
+                                            <div class="media__card-text">Комплексная работа по имплантации</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            @@include('html/_consult.html', {})
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

@@ -11,8 +11,19 @@
 	font-weight: 700;
 	line-height: 140%;
 	font-size: 2rem;
+
 	@media (min-width: $md4) {
 		font-size: 2.125rem;
+	}
+}
+
+.title-md {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 130%;
+
+	@media (min-width:$md4) {
+		font-size: 2.375rem;
 	}
 }
 
@@ -20,9 +31,11 @@
 	font-weight: 700;
 	line-height: 130%;
 	font-size: 2rem;
+
 	@media (min-width: $md4) {
 		font-size: 2.125rem;
 	}
+
 	@media (min-width: $md3) {
 		font-size: 2.875rem;
 	}
@@ -37,15 +50,18 @@
 	font-size: 1rem;
 	transition: background-color 0.3s ease;
 	box-shadow: 0 20px 34px 0 rgba(48, 99, 111, 0.09);
+
 	.swiper-navigation-icon {
 		color: rgba($color: #334b59, $alpha: 0.3);
 		width: auto;
 		height: 1.375rem;
 		transition: color 0.3s ease;
 	}
+
 	@media (any-hover: hover) {
 		&:hover {
 			background: #fff;
+
 			.swiper-navigation-icon {
 				color: #334b59;
 			}
@@ -58,6 +74,7 @@
 		margin-right: 0.25rem;
 	}
 }
+
 .swiper-button-next {
 	.swiper-navigation-icon {
 		margin-left: 0.25rem;
@@ -68,6 +85,7 @@
 	&.swiper-pagination-lock {
 		display: none !important;
 	}
+
 	&.swiper-pagination-bullets {
 		position: static;
 		bottom: auto;
@@ -79,15 +97,18 @@
 		--swiper-pagination-bullet-horizontal-gap: #{rem(10)};
 		--swiper-pagination-bullet-size: #{rem(10)};
 		--swiper-pagination-bullet-inactive-opacity: 0.4;
+
 		&.swiper-pagination-bullets-dynamic {
 			transform: none;
 			margin-inline: auto;
 			display: block;
 			width: 100%;
 		}
+
 		.swiper-pagination-bullet {
 			background: currentColor;
 			position: relative;
+
 			&::before {
 				content: "";
 				position: absolute;
@@ -97,6 +118,7 @@
 				left: 50%;
 				transform: translate(-50%, -50%);
 			}
+
 			&.swiper-pagination-bullet-active {
 				opacity: 1;
 			}
