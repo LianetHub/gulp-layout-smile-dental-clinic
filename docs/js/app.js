@@ -1,5 +1,7 @@
 "use strict";
 
+// const { default: Swiper } = require("swiper");
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const body = document.body;
@@ -337,11 +339,14 @@ function initSliders() {
     }
 
     if (document.querySelector('.certs__slider')) {
+
+
         new Swiper('.certs__slider .swiper', {
             spaceBetween: 20,
             slidesPerView: "auto",
             watchOverflow: true,
             autoHeight: true,
+            watchSlidesProgress: true,
             navigation: {
                 prevEl: '.certs__slider-prev',
                 nextEl: '.certs__slider-next'

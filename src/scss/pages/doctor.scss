@@ -123,6 +123,11 @@
     &__slider {
         margin-top: 2rem;
         position: relative;
+
+        & .swiper {
+            overflow: visible;
+            clip-path: inset(rem(-40) rem(-15) rem(-40) rem(-15));
+        }
     }
 
     //.certs__pagination
@@ -205,6 +210,10 @@
         flex-direction: column;
         gap: rem(24);
 
+        &.swiper-slide-visible {
+            box-shadow: 0 rem(15) rem(24) rgba(48, 99, 111, 0.09);
+        }
+
         @media (min-width:$md5) {
             height: auto;
         }
@@ -213,7 +222,7 @@
     // .certs__image
     &__image {
         flex: 1 1 auto;
-        box-shadow: 0 rem(20) rem(34) rgba(48, 99, 111, 0.09);
+
         border-radius: rem(10);
         overflow: hidden;
 
