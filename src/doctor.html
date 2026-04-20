@@ -90,7 +90,6 @@
                             <div class="certs">
                                 <h2 class="certs__title title-md">Сертификаты</h2>
                                 <div class="certs__slider">
-                                    <button type="button" class="certs__slider-prev swiper-button-prev"></button>
                                     <div class="swiper">
                                         <div class="swiper-wrapper">
                                             <div class="certs__slide swiper-slide">
@@ -138,7 +137,10 @@
                                         </div>
                                     </div>
                                     <div class="certs__pagination swiper-pagination"></div>
-                                    <button type="button" class="certs__slider-next swiper-button-next"></button>
+                                    <div class="certs__slider-controls">
+                                        <button type="button" class="certs__slider-prev swiper-button-prev"></button>
+                                        <button type="button" class="certs__slider-next swiper-button-next"></button>
+                                    </div>
                                 </div>
                             </div>
                             <section class="reviews">
@@ -154,9 +156,7 @@
                             </section>
                             <section class="media">
                                 <h2 class="media__title title-md">Фото работ</h2>
-                                <p class="media__subtitle">Это реальные лица наших пациентов, у которых мы запросили разрешение, чтобы показать вам как изменилась их улыбка</p>
                                 <div class="media__slider">
-                                    <button type="button" class="media__slider-prev swiper-button-prev"></button>
                                     <div class="swiper">
                                         <div class="swiper-wrapper">
                                             <div class="media__card swiper-slide">
@@ -206,7 +206,13 @@
                                         </div>
                                     </div>
                                     <div class="media__pagination swiper-pagination"></div>
-                                    <button type="button" class="media__slider-next swiper-button-next"></button>
+                                </div>
+                                <div class="media__footer">
+                                    <p class="media__subtitle">Это реальные лица наших пациентов, у которых мы запросили разрешение, чтобы показать вам как изменилась их улыбка</p>
+                                    <div class="media__pagination-controls">
+                                        <button type="button" class="media__slider-prev swiper-button-prev"></button>
+                                        <button type="button" class="media__slider-next swiper-button-next"></button>
+                                    </div>
                                 </div>
                             </section>
 

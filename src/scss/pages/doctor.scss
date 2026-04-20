@@ -131,33 +131,70 @@
 
         &.swiper-pagination {
 
-            @media (min-width: 1439.98px) {
+            @media (min-width: $md3) {
                 display: none;
             }
         }
     }
 
+    &__slider-controls {
+        display: none;
+
+        @media (min-width: $md3) {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+
     // .certs__slider-prev
     &__slider-prev {
-        &.swiper-button-prev {
-            --swiper-navigation-top-offset: calc(50% - 1.5rem);
-            left: -80px;
+        position: static;
+        inset: auto;
+        transform: none;
+        margin: 0;
+        background: #00B4DD;
+        color: #fff;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: darken($color: #00B4DD, $amount: 10);
+
+                .swiper-navigation-icon {
+                    color: #fff;
+                }
+            }
         }
 
-        @media (max-width: 1439.98px) {
-            display: none;
+
+        .swiper-navigation-icon {
+            color: #fff;
         }
     }
 
     // .certs__slider-next
     &__slider-next {
-        &.swiper-button-next {
-            --swiper-navigation-top-offset: calc(50% - 1.5rem);
-            right: -80px;
+        position: static;
+        inset: auto;
+        transform: none;
+        margin: 0;
+        background: #00B4DD;
+        color: #fff;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: darken($color: #00B4DD, $amount: 10);
+
+                .swiper-navigation-icon {
+                    color: #fff;
+                }
+            }
         }
 
-        @media (max-width: 1439.98px) {
-            display: none;
+        .swiper-navigation-icon {
+            color: #fff;
         }
     }
 
@@ -223,10 +260,16 @@
 
     // .media__subtitle
     &__subtitle {
-        margin-top: rem(20);
+
         max-width: rem(605);
     }
 
+    &__footer {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     // .media__slider
     &__slider {
@@ -236,25 +279,49 @@
 
     // .media__slider-prev
     &__slider-prev {
-        &.swiper-button-prev {
-            --swiper-navigation-top-offset: calc(50% - 1.5rem);
-            left: -80px;
+        position: static;
+        inset: auto;
+        transform: none;
+        margin: 0;
+        background: #00B4DD;
+        color: #fff;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: darken($color: #00B4DD, $amount: 10);
+
+                .swiper-navigation-icon {
+                    color: #fff;
+                }
+            }
         }
 
-        @media (max-width:1439.98px) {
-            display: none;
+        .swiper-navigation-icon {
+            color: #fff;
         }
     }
 
     // .media__slider-next
     &__slider-next {
-        &.swiper-button-next {
-            --swiper-navigation-top-offset: calc(50% - 1.5rem);
-            right: -80px;
+        position: static;
+        inset: auto;
+        transform: none;
+        margin: 0;
+        background: #00B4DD;
+        color: #fff;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: darken($color: #00B4DD, $amount: 10);
+
+                .swiper-navigation-icon {
+                    color: #fff;
+                }
+            }
         }
 
-        @media (max-width:1439.98px) {
-            display: none;
+        .swiper-navigation-icon {
+            color: #fff;
         }
     }
 
@@ -263,9 +330,22 @@
         margin-top: 1.5rem;
 
         &.swiper-pagination {
-            @media (min-width: 1439.98px) {
+            @media (min-width: $md3) {
                 display: none;
             }
+        }
+    }
+
+    // .media__pagination-controls 
+    &__pagination-controls {
+        display: none;
+
+        @media (min-width:$md3) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
         }
     }
 
