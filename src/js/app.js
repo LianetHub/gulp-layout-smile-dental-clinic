@@ -343,9 +343,8 @@ function initSliders() {
 
         new Swiper('.certs__slider .swiper', {
             spaceBetween: 20,
-            slidesPerView: "auto",
+            slidesPerView: 2,
             watchOverflow: true,
-            autoHeight: true,
             watchSlidesProgress: true,
             navigation: {
                 prevEl: '.certs__slider-prev',
@@ -356,18 +355,16 @@ function initSliders() {
                 clickable: true,
             },
             breakpoints: {
-                575.98: {
-                    autoHeight: false
-                },
+
                 767.98: {
                     slidesPerView: 2,
                     spaceBetween: 24,
-                    autoHeight: false
+
                 },
                 1199.98: {
                     slidesPerView: 3,
                     spaceBetween: 24,
-                    autoHeight: false
+
                 }
             }
         });

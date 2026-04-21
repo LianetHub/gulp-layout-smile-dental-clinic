@@ -2645,6 +2645,7 @@ body.popup-active .wrapper::before {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.5rem;
+  height: auto;
 }
 
 .certs__slide.swiper-slide-visible .certs__image {
@@ -2658,6 +2659,7 @@ body.popup-active .wrapper::before {
           flex: 1 1 auto;
   border-radius: 0.625rem;
   overflow: hidden;
+  height: 10rem;
 }
 
 .media {
@@ -2882,10 +2884,6 @@ body.popup-active .wrapper::before {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-  }
-
-  .certs__slide {
-    height: auto;
   }
 
   .certs__image {
