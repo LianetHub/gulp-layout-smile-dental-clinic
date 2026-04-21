@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Manrope";
-  src: url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Manrope-VariableFont_wght.woff") format("woff");
+  font-family: "Inter";
+  src: url("../fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2 supports variations"), url("../fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2-variations"), url("../fonts/Inter-VariableFont_opsz,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -8,8 +8,8 @@
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2 supports variations"), url("../fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2-variations"), url("../fonts/Inter-VariableFont_opsz,wght.woff") format("woff");
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Manrope-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -2647,9 +2647,9 @@ body.popup-active .wrapper::before {
   gap: 1.5rem;
 }
 
-.certs__slide.swiper-slide-visible {
-  -webkit-box-shadow: 0 0.9375rem 1.5rem rgba(48, 99, 111, 0.09);
-          box-shadow: 0 0.9375rem 1.5rem rgba(48, 99, 111, 0.09);
+.certs__slide.swiper-slide-visible .certs__image {
+  -webkit-box-shadow: 0 0.75rem 1.25rem rgba(48, 99, 111, 0.09);
+          box-shadow: 0 0.75rem 1.25rem rgba(48, 99, 111, 0.09);
 }
 
 .certs__image {

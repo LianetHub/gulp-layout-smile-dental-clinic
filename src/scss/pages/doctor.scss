@@ -211,7 +211,10 @@
         gap: rem(24);
 
         &.swiper-slide-visible {
-            box-shadow: 0 rem(15) rem(24) rgba(48, 99, 111, 0.09);
+            .certs__image {
+
+                box-shadow: 0 rem(12) rem(20) rgba(48, 99, 111, 0.09);
+            }
         }
 
         @media (min-width:$md5) {
